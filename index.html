@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>DIP MienTrung</title>
+</head>
+<body>
+    <div id="container">
+        <!-- Header Slider-Bar -->
+        <nav class="header_sliderbar">
+            <!-- Header Logo -->
+            <a href="" class="header_logo">
+                <span class="header_logo-img-wrap"><div class="header_logo-img" style="background-image: url(./assets/img/logo.jpg);"></div></span>
+                <div class="header_logo-name">DIP Miền Trung</div>
+            </a>
+            <!-- Header Slider-Bar List -->
+            <ul class="header_sliderbar-list">
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="home-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Trang Chủ
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <label for="input-subbar">
+                        <input hidden type="checkbox" id="input-subbar" class="show-subbar">
+                        <a href="./project.html" class="header_sliderbar-item-link">
+                            <ion-icon class="header_sliderbar-item-icon" name="stats-chart-outline"></ion-icon>
+                            <div class="header_sliderbar-item-label">
+                                Dự Án
+                            </div>
+                        </a>
+                    </label>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="people-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Khách Hàng
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="book-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Quản Lý
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="id-card-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Yêu Cầu
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="clipboard-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Báo Cáo
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="help-circle-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Dịch Vụ Cơ Bản
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="chatbubbles-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Zalo
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="log-out-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Đăng Xuất
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Main -->
+        <div class="main">
+            <!--Main Header -->
+            <div class="header">
+                <!-- Header TopBar -->
+                <nav class="header_topbar">
+                    <!-- Header Button Toggle -->
+                    <div class="header_btn-toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                    <!-- Header TopBar-List -->
+                    <ul class="header_topbar-list">
+                        <li class="header_topbar-item header_topbar-language">
+                            Ngôn Ngữ
+                            <ion-icon class="icon-arrow" name="chevron-down-outline"></ion-icon>
+                        </li>
+                        <li class="header_topbar-item header_topbar-notify separator">
+                                <ion-icon class="header_topbar-notify-icon" name="notifications-outline"></ion-icon>
+                        </li>
+                        <!-- Header User -->
+                        <li class="header_topbar-item header_topbar-user">
+                            <ion-icon class="header_topbar-user-icon" name="person-outline"></ion-icon>
+                            <span class="header_topbar-user-name">ADMIN</span>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Header PageBar -->
+                <div class="header_pagebar">
+                    <!-- Header Page-Name -->
+                    <div class="header_pagebar-name">
+                        Trang chủ
+                    </div>
+                    <!-- Header PageBar-list -->
+                    <ul class="header_pagebar-list">
+                        <li class="header_pagebar-item header_pagebar-item--current"><a href="" class="header_pagebar-link">Dự án</a></li>
+                        <li class="header_pagebar-item"><a href="" class="header_pagebar-link">Khách hàng</a></li>
+                        <li class="header_pagebar-item"><a href="" class="header_pagebar-link">Quản lý</a></li>
+                        <li class="header_pagebar-item"><a href="" class="header_pagebar-link">Yêu cầu</a></li>
+                    </ul>
+                </div>  
+            </div>
+
+            <!--Main Body -->
+            <div class="body">
+                <div class="grid">
+                     <!-- Body Data-Table (Khách Hàng, Dự Án, Căn Hộ  -->
+                    <div class="home_cart">
+                        <div class="row">
+                            <div class="col l-4 m-12 c-12">
+                                <a href="" class="body_data-table">
+                                    <div class="body_data-table-icon">
+                                        <ion-icon name="people-outline"></ion-icon>
+                                    </div>
+                                    <div class="body_data-table-info">
+                                        <div class="body_data-table-quantity">
+                                            527
+                                        </div>
+                                        <div class="body_data-table-name">
+                                            Khách Hàng
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-4 m-12 c-12">
+                                <a href="" class="body_data-table">
+                                    <div class="body_data-table-icon">
+                                        <ion-icon name="business-outline"></ion-icon>
+                                    </div>
+                                    <div class="body_data-table-info">
+                                        <div class="body_data-table-quantity">
+                                            512
+                                        </div>
+                                        <div class="body_data-table-name">
+                                            Căn Hộ
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-4 m-12 c-12">
+                                <a href="" class="body_data-table">
+                                    <div class="body_data-table-icon">
+                                        <ion-icon name="stats-chart-outline"></ion-icon>
+                                    </div>
+                                    <div class="body_data-table-info">
+                                        <div class="body_data-table-quantity">
+                                            25
+                                        </div>
+                                        <div class="body_data-table-name">
+                                            Dự Án
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l-8">
+                            <!-- Body Fee -->
+                            <div class="body_fee">
+                                <div class="row">
+                                    <div class="col l-6">
+                                        <div class="body_fee-item body_fee-item-separator">
+                                            <div class="body_fee-heading">
+                                                <h3 class="body_fee-heading-name">
+                                                    Phí Đã Thu Trong Tháng  
+                                                </h3>
+                                                <div class="body_fee-heading-ellipserbar">
+                                                    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                                                </div>
+                                            </div>
+                                            <div class="body_fee-data">
+                                                <div class="body_fee-data-piechart">                                                  
+                                                    &emsp;&emsp;<svg  width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="128" cy="128" r="128" fill="#E6E5E6"/>
+                                                        <path d="M238.328 63.1015C251.67 85.7839 257.697 112.028 255.588 138.259C253.479 164.49 243.336 189.434 226.541 209.693C209.745 229.952 187.114 244.542 161.728 251.476C136.342 258.411 109.436 257.352 84.6738 248.444L128 128L238.328 63.1015Z" fill="#007AFF"/>
+                                                        <path d="M37.4903 37.4903C51.463 23.5176 68.4811 12.9697 87.2113 6.67283C105.942 0.375952 125.875 -1.49888 145.451 1.19521C165.027 3.8893 183.713 11.0791 200.046 22.2015C216.379 33.3239 229.915 48.0768 239.594 65.3044L128 128L37.4903 37.4903Z" fill="#9013FE"/>
+                                                        <path d="M85.7981 248.843C68.8847 242.936 53.3996 233.545 40.3445 221.277L128 128L85.7981 248.843Z" fill="#FB8832"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="body_fee-data-desc-wrap">
+                                                    <div class="row">
+                                                        <div class="col l-4">
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#007AFF"/>
+                                                                </svg>&ensp;
+                                                                Tiền thuê
+                                                            </p>
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#23bfaa"/>
+                                                                </svg>&ensp;
+                                                                Tiền xe
+                                                            </p>
+                                                        </div>
+                                                        <div class="col l-4">
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#fb8832"/>
+                                                                </svg>&ensp;
+                                                                Tiền điện
+                                                            </p>
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#e6e5e6"/>
+                                                                </svg>&ensp;
+                                                                Phí vệ sinh
+                                                            </p>
+                                                        </div>
+                                                        <div class="col l-4">
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#fef620" />
+                                                                </svg>&ensp;
+                                                                Tiền nước
+                                                            </p>
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#9013fe"/>
+                                                                </svg>&ensp;
+                                                                Phí quản lý
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-6">
+                                        <div class="body_fee-item">
+                                            <div class="body_fee-heading">
+                                                <h3 class="body_fee-heading-name">
+                                                    Tổng Phí Còn Nợ
+                                                </h3>
+                                                <div class="body_fee-heading-ellipserbar">
+                                                    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                                                </div>
+                                            </div>
+                                            <div class="body_fee-data">
+                                                <div class="body_fee-data-piechart">                                                  
+                                                    &emsp;&emsp;<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="128" cy="128" r="94" fill="#9B51E0"/>
+                                                        <path d="M238.328 63.1015C251.67 85.7839 257.697 112.028 255.588 138.259C253.479 164.49 243.336 189.434 226.541 209.693C209.745 229.952 187.114 244.542 161.728 251.476C136.342 258.411 109.436 257.352 84.6738 248.444L128 128L238.328 63.1015Z" fill="#FB8832"/>
+                                                        <path d="M48.804 48.804C60.8952 36.7129 75.5944 27.5508 91.7747 22.0201C107.955 16.4895 125.187 14.7371 142.15 16.8974C159.112 19.0576 175.355 25.0732 189.632 34.4828C203.91 43.8925 215.843 56.4464 224.518 71.1822L128 128L48.804 48.804Z" fill="#007AFF"/>
+                                                        <path d="M91.0733 233.738C76.2741 228.569 62.7247 220.352 51.3015 209.617L128 128L91.0733 233.738Z" fill="#E6E5E6"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="body_fee-data-desc-wrap">
+                                                    <div class="row">
+                                                        <div class="col l-4">
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#007AFF"/>
+                                                                </svg>&ensp;
+                                                                Tiền thuê
+                                                            </p>
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#23bfaa"/>
+                                                                </svg>&ensp;
+                                                                Tiền xe
+                                                            </p>
+                                                        </div>
+                                                        <div class="col l-4">
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#fb8832"/>
+                                                                </svg>&ensp;
+                                                                Tiền điện
+                                                            </p>
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#e6e5e6"/>
+                                                                </svg>&ensp;
+                                                                Phí vệ sinh
+                                                            </p>
+                                                        </div>
+                                                        <div class="col l-4">
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#fef620" />
+                                                                </svg>&ensp;
+                                                                Tiền nước
+                                                            </p>
+                                                            <p class="body_fee-data-desc">
+                                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="4" cy="4" r="4" fill="#9013fe"/>
+                                                                </svg>&ensp;
+                                                                Phí quản lý
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Body Diary-Job -->
+                            <div class="body_diaryjob">
+                                <div class="body_diaryjob-heading">
+                                    <h3 class="body_diaryjob-title">
+                                        Nhật Ký Xử Lý
+                                    </h3>
+                                    <span class="body_diaryjob-switch">
+                                        <a href="" class="body_diaryjob-switch-link body_diaryjob-switch--current">Cư dân</a>
+                                        <a href="" class="body_diaryjob-switch-link">Kỹ thuật</a>
+                                    </span>
+                                </div>
+                                <table class="body_diaryjob-table">
+                                    <tr class="body_diaryjob-row-field">
+                                        <th class="body_diaryjob-column-field">Trạng thái</th>
+                                        <th class="body_diaryjob-column-field">Mã yêu cầu</th>
+                                        <th class="body_diaryjob-column-field">Ngày yêu cầu</th>
+                                        <th class="body_diaryjob-column-field">Mặt bằng</th>
+                                        <th class="body_diaryjob-column-field">Tiêu đề</th>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-complete">Hoàn thành</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH01</td>
+                                        <td class="body_diaryjob-column-fieldvalue">02/11/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MN01</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Coffee</td>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-close">Đã đóng</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH87</td>
+                                        <td class="body_diaryjob-column-fieldvalue">12/11/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MBKH2</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Nhà Hàng</td>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-close">Đã đóng</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH02</td>
+                                        <td class="body_diaryjob-column-fieldvalue">17/01/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MBHT21</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Khách Sạn</td>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-pending">Chưa giải quyết</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH98</td>
+                                        <td class="body_diaryjob-column-fieldvalue">22/01/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MBVH54</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Vỉa Hè</td>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-complete">Hoàn thành</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH90</td>
+                                        <td class="body_diaryjob-column-fieldvalue">06/06/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MNVH65</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Vỉa Hè</td>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-pending">Chưa giải quyết</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH08</td>
+                                        <td class="body_diaryjob-column-fieldvalue">19/09/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MNCF23</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Coffee</td>
+                                    </tr><tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-pending">Chưa giải quyết</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH97</td>
+                                        <td class="body_diaryjob-column-fieldvalue">08/11/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MBNH02</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Nhà Hàng</td>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-complete">Hoàn thành</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH01</td>
+                                        <td class="body_diaryjob-column-fieldvalue">17/11/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MNCT9</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Công Ty</td>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-complete">Hoàn thành</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH24</td>
+                                        <td class="body_diaryjob-column-fieldvalue">02/11/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MBTD87</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Tự Do</td>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-complete">Hoàn thành</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH16</td>
+                                        <td class="body_diaryjob-column-fieldvalue">02/11/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MNCF23</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Coffee</td>
+                                    </tr>
+                                    <tr class="body_diaryjob-row-fieldvalue">
+                                        <td class="body_diaryjob-column-fieldvalue body_diaryjob-column-fieldvalue--status-close">Đã đóng</td>
+                                        <td class="body_diaryjob-column-fieldvalue">KH19</td>
+                                        <td class="body_diaryjob-column-fieldvalue">02/11/2021</td>
+                                        <td class="body_diaryjob-column-fieldvalue">MNHT6</td>
+                                        <td class="body_diaryjob-column-fieldvalue">Khách Sạn</td>
+                                    </tr>
+
+                                </table>
+                                <ul class="pagination">
+                                    <li class="pagination-item">
+                                    <a href="#" class="pagination-item-link">
+                                        <ion-icon class="pagination-item-icon pagination-item-icon--disabled" name="caret-back"></ion-icon>
+                                    </a></li>
+                                    <li class="pagination-item pagination-item-current"><a href="" class="pagination-item-link">1</a></li>
+                                    <li class="pagination-item"><a href="" class="pagination-item-link">2</a></li>
+                                    <li class="pagination-item"><a href="" class="pagination-item-link">3</a></li>
+                                    <li class="pagination-item"><a class="pagination-item-link">...</a></li>
+                                    <li class="pagination-item"><a href="" class="pagination-item-link">10</a></li>
+                                    <li class="pagination-item"><a href="" class="pagination-item-link">
+                                        <ion-icon class="pagination-item-icon" name="caret-forward"></ion-icon>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col l-4">
+                            <!-- Body Request -->
+                            <div class="body_request">
+                                <div class="body_request-heading">
+                                    <h3 class="body_request-title">
+                                        Yêu Cầu
+                                    </h3>
+                                    <span class="body_request-quantity">+32</span>
+                                </div>
+                                <div class="body_request-list">
+                                    <div class="body_request-item">
+                                        <span class="body_request-item-icon body_request-item-icon--new">
+                                            <ion-icon name="mail-unread-outline"></ion-icon>
+                                        </span>
+                                        <span class="body_request-item-info">
+                                            <div class="body_request-item-indexline body_request-item-indexline--new"></div>
+                                            <div class="body_request-item-name">
+                                                Yêu cầu mới
+                                            </div>
+                                        </span>
+                                        <span class="body_request-item-percent">
+                                            15%
+                                        </span>
+                                    </div>
+                                    <div class="body_request-item">
+                                        <span class="body_request-item-icon body_request-item-icon--progress">   
+                                            <ion-icon name="timer-outline"></ion-icon>
+                                        </span>
+                                        <span class="body_request-item-info">
+                                            <div class="body_request-item-indexline body_request-item-indexline--progress"></div>
+                                            <div class="body_request-item-name">
+                                                Đang xử lý
+                            
+                                            </div>
+                                        </span>
+                                        <span class="body_request-item-percent">
+                                            70%
+                                        </span>
+                                    </div>
+                                    <div class="body_request-item">
+                                        <span class="body_request-item-icon body_request-item-icon--close">
+                                            <ion-icon name="close-circle-outline"></ion-icon>
+                                        </span>
+                                        <span class="body_request-item-info">
+                                            <div class="body_request-item-indexline body_request-item-indexline--close"></div>
+                                            <div class="body_request-item-name">
+                                                Đã đóng
+                            
+                                            </div>
+                                        </span>
+                                        <span class="body_request-item-percent">
+                                            29%
+                                        </span>
+                                    </div>
+                                    <div class="body_request-item">
+                                        <span class="body_request-item-icon body_request-item-icon--complete">
+                                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                        </span>
+                                        <span class="body_request-item-info">
+                                            <div class="body_request-item-indexline body_request-item-indexline--complete"></div>
+                                            <div class="body_request-item-name">
+                                                Hoàn thành
+                            
+                                            </div>
+                                        </span>
+                                        <span class="body_request-item-percent">
+                                            40%
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Body New-Request-->
+                            <div class="body_newrequest">
+                                <div class="body_newrequest-heading">
+                                    <h3 class="body_newrequest-title">
+                                        Yêu Cầu Mới Nhất
+                                    </h3>
+                                    <a href="">
+                                        <button class="body_newrequest-btn">Xem tất cả</button>
+                                    </a>
+                                </div>
+                                <ul class="body_newrequest-list">
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Lee Min Ho</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Khách Hàng
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://media.congluan.vn/files/content/2021/08/08/ji-chang-wook-17202674.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Ji Jang Wook</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Khách Hàng
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Jackson_live_in_Lisbon.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Michael Jackson</p>
+                                                <span class="body_newrequest-item-department">
+                                                    CSKH
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://event.mediacdn.vn/2020/8/14/st-15973999489741584015103.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Sơn Tùng MTP</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Tin Tức
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://image.thanhnien.vn/w660/Uploaded/2021/znetns/2021_09_12/139022126_1128352867627841_2656083727219483537_n1_qrrs.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Jack 5 Triệu</p>
+                                                <span class="body_newrequest-item-department">
+                                                    CSKH
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2019/11/14/f/5/c/0/1573701246190_600.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Chi Dân</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Vận Hành
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://static2.yan.vn/YanNews/2167221/202110/nal-la-ai-thong-tin-tieu-su-ca-si-ho-phi-nal-e02a8c68.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Nal</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Khách Hàng
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://tieusunguoinoitieng.com/wp-content/uploads/2019/10/tieu-su-justin-bieber-3678.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Justin Bieber</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Khách Hàng
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBUSEBIVFRUWGBYXFRUVFRUVFxUXFRcXFxUVFxcYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDg0NDisZFRkrKysrKy0rKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQIDBAUHBgj/xAA+EAACAQMCAwYDBgMGBwEAAAAAAQIDBBEFIRIxQQYHIlFhcRMykVKBobHB8CNC0RQVQ2JykhY0U4Ki4fEk/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDtIAAAAAAAJAAAAAAAAAKeNAVAAASQAABIAAgASQAJAAAAASAAKAAAAAAAASAAAKZzUU3JpJbtvZJebZzTtR3qQoVXC2iqihJJyb2n58OOnqB0HUNUt7dfx6sIZ5cUkm/ZGJqfaeytqLrVa8OFdIyUpSb5KMVu2z5s7R9oq15WnVqPeTeEuSWdkjV1akpvLfLCA6trnfBWbf8AZYQjDkuNOU36vDwvbcyrXvTc7aEm1K54nxU0uGmork89dt+ZyCjRy1nl1Mj4EWs5xH9eiIjrOh96deVVxqQjUTzwxjinj14pN5PSWHeVQqYU7avFt424JrPpiWX9DgTlCPLOf30Lde4nJ7zf1YH1bpuq0bhfwp5a5xacZx94vdGYfJVrf3NGpGrSrVIzj8sozeUvLPl6cjqfYTvXqzmqF/ibk1GFSMcSbe2JRWz91j2KrsYKac1JJp5T3TJAkAgCQQSAAAAAAAABSAAAAAkgkgCSGyTU69fVoQlG1gp1uFtKTxGKx80n+S6gcx74O2EJ4taTniLfxecU5dI898HIa9xKe/PBk6ncTrTlKpLik23Jvzb3MezjiWGRFdKDxxY8y9GGFvybTMijBfC25rO3oUU5rhaf2eXqBRQu4xnlrbfb35Fvgcnl5xzSXVmdo9hTeJ1Htnz5vobS40yWIOKfik/EvJLZL1A0lWg5Y4E28b4X7b92YlW3a55X78jefAdLdPEk8rDaa+hiXU3N8T3fr1A1U6fk2RGbTTzuuXpjyL8qUnyTLLpPlw7+oHdu5vtaq9FWVZv4tNOVOTefiU88vPijlL2afmdMPlTslf1KF5QlCUYTVSKi5PEU5PhxJ/ZecP3PqihKTiuJJSxuk8rPXD8iquEAAASAAAAAAAAAKQAAAAAAASanWqk7ejcV4uG1Ny8W2OCL5vy2NseI74r6dLSqih/iSjTl6Rk/F+WPvA+c7qupTcltl5x77kRqb5Kadu28JZb6HsNH7BVKiUqj4U9/UiPO28HzXUyVZyW51jQuxNrTiuKPE/NmwvezFu47QXv7Acl0XSKt3W4IbRjhvH4HVtG0H4VNJrdcs7jsVZwp1a8YxxtTf14/1R7CnSyVXP7zsVCblJ5y/wB5NJe9jJUvFBKceq6nXJwwYtS2iBxh6BVbfhcV0yeev7edOTT+h9AqzhhrBzjt5pSU8xQHMKmM7rY+oewF87jTberJ5k6cVJ+sfC/xR82Xdtud47larelRjJ5cKlWOPJOXEl9JIg92ASUAQSABBIAAAAABSAAAAAAACTz3eBRpy0y5+Ik0qUms9JJZi/rg9CeY7zM/3TdYeP4f6rYDhnYuzhKbnJbrkdNtK2UjmnZKrhNdWe20q4zt5AexsXsZdeGYvBrbGbwbSMtgMLR6MY11Jc5wlF+vBJNP/wAmelpJZPP2f/MJfZjNv/ucUvyf0N5FgVXUUa+oZs+RiVIgYs2eO7Y4aR7OUDyfbDT6koucFnHNAcy1SioM7J3OVIvTVhJNVKmX5vOU39zRxLUq8pPfodU7hr1yt7ii/wCSopr2nH+sX9SI6mCAVQkAAAAAAAAACkAAAAAAAEmBrtkri1rUX/PTnH6pmeAPlfQW4zaezWz91sz3mjptmkv9OjR1S8ppLEajlH2n4vzkzK/v9W8uGEeKXXOcL0Ijomm0pdTaSagt036Jczmdv29rrd0lhe5v9J7fUarScZRfrjH1Kr12mWbg5VJ/NN8vsxXyxX76s2VNmDQvVNZRotY1O4hJqmtujA9XWqwgszkkvV4NDddpLeMuGLcvY8dTsbi4nmrWk8vk3svZHp7HTKFvFSlHifnJ5AzLTVqNZ4i8PyawZc6aksMxY31KT2S/Az4boDh3bXT1RvKkUsJ4kvvPX926lp1pUuZxlKVZrhhGOZOMM8OPdt8/Qr7wNJU7mjPpLwy+7f8Aqb7Q71Tj8J03DCxHiWOJL7PoB6/QtT/tVCNXgcG+cZc010NgYWj0FCkkvMzgIJAAAgkAAAABIFskgkAAAAAAEgAcS7W6J/ZNXqSXyV6bqxzv4uJcS+v5mgp61ClWzKCfrjc613kaUqlKFwvmpcUX/pqYz+KRy697NRrU+NJ8Xp1IjZ/8V6a4fxoOXpGDZh3tGzqyk7Pii1LCeG4TljOIz5NmBo2nxUXRqUZPL+y3+J7rS9KSoQpfDxTi+JJ4+bOeL3Kq13f306jlSqZzF9T1+q2WYvC36HnNHhGF83Fc1v8AU9xc9AOU3kKrrSpVak6McPhcNm5Y5t9EYGhdmK1Tilc15zjFONNKpNZb/nk/T7zq1/pVOssuKbLFnpEKb2gvxYHnOynY5UcTqValSXk2+FfXmexdPCMiMEkY9eYGq1S2jUlTyl4Zpmznbxai+q5GquXKU1hPC5tJ7erNrplKVTGViC64xn2zzA21lDEEi+QkABIAEEkEgAAwAAAoJIJAAAAEABIAAs3dvGrTlCaypJp/ecs09uhcVKE+cJNb+XR/Tc6yc670NJlTcL+kvlxGsl9n+WX3cvvAzaFtB7pGZOmoxNB2e1NVYJpm/qVPCwPK6TXzev0eG/0Oi3G8U/Q4za9q6VC6kpLwuUsy8nn/ANHvbjtrbqgpRl8R48MIeKcn5JIDe07nhe5kxrpnmdG1dX0FwwnBr5lNYcfRmyhNxeJcwNlUmay9rYLsq2xr6zywN52dhtOXnhfTf9TcGv0KOKK9W2bECASQBIIAEggkAAAAAAoAAEggASCMjIEgjIyBJZvrWFanOlNZjOLi16NYLuRkDgltKpp97Utp58MsJ+afJ/TB0C2uuOnz5mo75rKlCVC5TSqtuGPtxiuLPuv1NPp+sL4SafkBqNZ7FznUbpPaTb382e37DdkYWSU5eKpJY4mtkn0XkeZvO1tSL+HRoylUfy7Z/wDplaZ2g1prgdu2nylwqOM+reAOoxjjpgx7tRZ4elR1vOZVqcF/mbkvpg2tnbXa8davGp/ljDhXvnLA2uDHqSXUipcbGvurrGEubA85S7b1NP1lwqTbtaipxqR6QbW1WPlhvfzXsdpTyso+XO8VYv35ShH8sM+g+wGpf2rTLaq3mXw1GX+qHgl+MQPQkAAAABIAABgAAABbIyUtkOQFeRkt5HEBXkcRb4iMgXeIZLeRkC5klMtZMXV9RjbW9WvNNxpwlNpc3wrOAOId/GtOpfwoxe1vDp9up4nn/tUfqeR0jWXH9UYXaS/nc1alep81STk/TL5fcsL7jT06ji8oiOmVddk4R4ea5G00jtfdNfDhRlN+n9TxnZ7V6TxGry6nUOz9rbySlQljPPG4F2znqFVp1oRhHy4nJm+t41MbrBlW8FTWXLPua/W+0tC3g5Tklj6lVZ1i7jQg5Tf78jUaNTnWfxprGflXoeY/4io3db4lxVjCnF5jDm36tLmZOr94dGnHgs4Ob5cc1wxXqo839+ANN3q28VUpyyuLDyuuM7P25nr+4rXZeOym/C81KXo/8SPs9n9TkOp3VSvU4qknKUnu2ey7ta3wtQt5N4XHwtvylFx5+7REfRgAKoSQABJBIAAAQSABi5IbKWylsCpyIcihyKXIC5xEcRaci3XuYwXFOSilzbaQGVxE8R43VO8Owof4nG/KHiPG6x3s1ZpxtaSh/mn4nj2XUDsimeQ7wu1FrRtK1BzjOpUhKCpp5a4ljMvJI47qHa/UKufiXE8PpF8K/A0sK/E25Zb83u8+rA1998hrzd3VLwv2NPKm0RFMZY3NzpHaa4tnmEn7GlaCA9nc9415NYWF67nnbm8rXMuKrNyf4L2Ri0KOeZsaawtgIp0S5GBVuUz2QGPJ+NG6spNQ+v7yae3g3M3kY4gB3ru87UwvLWEJz/8A0U4qNRPZyxtxrzTPWo+VlcShhxk0+jTaa9muR6bSe8nUbdJOoqqX/UWX/uW7Kr6DBynTO+KDwq9BrzlF5X05nvNE7VWV2s0a0G+sW8SXvF7gbsEZJAAEACSABr3Ipcils02u9orazg5VqiXlFbyfsgNxKRpdY7UWlqn8WrFNfyp5l9Ecp7U94txcNwt26dPlnlNr36HhqtWUnmTbfVt5YHUdd71XnFpDb7VRfomeF1ntPd3b/j1XJfZ5L6I0uSSIqz5lanjkizkjiAu1J5KLd/mWakybepsBsJ7mJUt0zMnyXsvxKUgNdK0JhaYM9oAWadFL8C4ookqSAjBRUjkupFmtLfAF2hHCMi5rPgWDDctsIpq1G0kBKnnqVRqFpMhsC9JFVOo08p4a5NPDLCZCkB6XT+2uo0GuC5m0v5ZvjXtue30XvimpRjd0ljrOGfrwv+pyjiyUy5gfUeh9qbO9X8CtCT6xziS94vc3OT5GoV5QkpQbjJbpxeGvvR1vsJ3orw0L54fJVuj/ANfl7lV10k1f9/2n/Xp/74/1IA812z7S07Kg5OXje0Irm3/Q4HqGoVK9R1Kkm231f4EX+oVa83OrNzk+rf7wYikiIrbKGQyeIAmgynIyBPDjqGgg2gMas8i1eSquti3bSwwNzSXg/fQhciKG9P8AfuSgDRJKQaAgZJwOECmUsIsU45ZVVkVRSSApfsWJvJlSS4WYqAqyRKJKREgIjkqbyUrYmIFeSckJIicvICWUp4JiJLqBPxARgAWU8NipISjuiuccAUxk2y66eVkU49S90AxCYkVfwCngCHIjYSeeZSuYEVCxS2mi/JZMdbSQG5tl4SqJFq3w8hB7gXEySEABFSWESyzcy6AW6e7LlTfZE21LI48bgW60vXkWiA0BOUg2UIq4QIJRC5lUWkBWo5REo4KoLn9zKmwKI7kolLBdpxwsgW8epBe+IgBhVenuV1AAKJFx/KSALEyP6AAIlM+ZIAjoYz+ZEgDeWnyfvyRb/mJAFRKIAEzMa4+b6EADMo/KvZ/mY1T5QALPQhgAR5lwAC3ER/UAC+iejAAnyLtX5QAMEAAf/9k=" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">G Dragon</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Tin Tức
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://nld.mediacdn.vn/2020/7/2/binz-bts-chon-3495-159365391024560627410.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Binz</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Khách Hàng
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Lee Min Ho</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Khách Hàng
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://media.congluan.vn/files/content/2021/08/08/ji-chang-wook-17202674.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Ji Jang Wook</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Khách Hàng
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Jackson_live_in_Lisbon.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Michael Jackson</p>
+                                                <span class="body_newrequest-item-department">
+                                                    CSKH
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="body_newrequest-item">
+                                        <a href="" class="body_newrequest-item-link">
+                                            <img src="https://event.mediacdn.vn/2020/8/14/st-15973999489741584015103.jpg" alt="" class="body_newrequest-item-avatar">
+                                            <div class="body_newrequest-item-info">
+                                                <p class="body_newrequest-item-name">Sơn Tùng MTP</p>
+                                                <span class="body_newrequest-item-department">
+                                                    Tin Tức
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Main footer -->
+            <div class="main_footer">
+                <p class="footer-copyright">Landsoft Building © 2020</p>
+                <a href="" class="footer-fanpage">
+                    <ion-icon class="footer-fanpage-icon" name="logo-facebook"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-youtube"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-linkedin"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-google"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="./assets/javascript/main.js"></script>
+</body>
+</html>
