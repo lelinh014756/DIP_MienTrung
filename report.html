@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="https://demobuilding.dip.vn/DL/img/logo-ico-dip.png">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Cổng thông tin quản lý dự án</title>
+</head>
+<body>
+    <div id="container">
+        <!-- Header Slider-Bar -->
+        <div class="overlay"></div>
+        <nav class="header_sliderbar">
+            <!-- Header Logo -->
+            <a href="" class="header_logo">
+                <span class="header_logo-img-wrap"><div class="header_logo-img" style="background-image: url(./assets/img/logo.jpg);"></div></span>
+                <div class="header_logo-name">DIP Việt Nam</div>
+            </a>
+            <!-- Header Slider-Bar List -->
+            <ul class="header_sliderbar-list">
+                <li class="header_sliderbar-item">
+                    <a href="/DIP_MienTrung/" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="home-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Trang Chủ
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <label for="input-subbar">
+                        <input hidden type="checkbox" id="input-subbar" class="show-subbar">
+                        <a href="./report.html" class="header_sliderbar-item-link">
+                            <ion-icon class="header_sliderbar-item-icon" name="stats-chart-outline"></ion-icon>
+                            <div class="header_sliderbar-item-label">
+                                Dự Án
+                            </div>
+                        </a>
+                    </label>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./customer.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="people-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Khách Hàng
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./manager.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="book-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Quản Lý
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./request.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="id-card-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Yêu Cầu
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="clipboard-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Báo Cáo
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./service.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="help-circle-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Dịch Vụ Cơ Bản
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./zalo.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="chatbubbles-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Zalo
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="log-out-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Đăng Xuất
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Main -->
+        <div class="main">
+            <!--Main Header -->
+            <div class="header">
+                <!-- Header TopBar -->
+                <nav class="header_topbar">
+                    <!-- Header Button Toggle -->
+                    <div class="header_btn-toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                    <!-- Header TopBar-List -->
+                    <ul class="header_topbar-list">
+                        <li class="header_topbar-item header_topbar-language">
+                            Ngôn Ngữ
+                            <ion-icon class="icon-arrow" name="chevron-down-outline"></ion-icon>
+                        </li>
+                        <li class="header_topbar-item header_topbar-notify separator">
+                                <ion-icon class="header_topbar-notify-icon" name="notifications-outline"></ion-icon>
+                        </li>
+                        <!-- Header User -->
+                        <li class="header_topbar-item header_topbar-user">
+                            <ion-icon class="header_topbar-user-icon" name="person-outline"></ion-icon>
+                            <span class="header_topbar-user-name">Admin</span>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Header PageBar -->
+                <div class="header_pagebar">
+                    <!-- Header Page-Name -->
+                    <div class="header_pagebar-name">
+                        Báo cáo
+                    </div>
+                </div>  
+            </div>
+
+            <!--Main Body -->
+            <div class="body showpage">
+                <div class="grid">
+                    <div class="report">
+                        <div class="row ">
+                            <div class="col l-3">
+                                <!-- Premises  -->
+                                <div class="category separator">
+                                        <div class="category_heading">
+                                            <h3 class="category_heading-name">Danh mục</h3>
+                                        </div>
+                                        <ul class="category-list">
+                                            <li class="category-item tab-table1 category-item--active">
+                                                    <div class="category-item-link-icon bg--blue">
+                                                        <svg class="category-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M21.47 19V5C21.47 3 20.47 2 18.47 2H14.47C12.47 2 11.47 3 11.47 5V19C11.47 21 12.47 22 14.47 22H18.47C20.47 22 21.47 21 21.47 19Z" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round"/>
+                                                        <path d="M11.47 6H16.47" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round"/>
+                                                        <path d="M11.47 18H15.47" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round"/>
+                                                        <path d="M11.47 13.95L16.47 14" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round"/>
+                                                        <path d="M11.47 10H14.47" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round"/>
+                                                        <path d="M5.49003 2C3.86003 2 2.53003 3.33 2.53003 4.95V17.91C2.53003 18.36 2.72003 19.04 2.95003 19.43L3.77003 20.79C4.71003 22.36 6.26003 22.36 7.20003 20.79L8.02003 19.43C8.25003 19.04 8.44003 18.36 8.44003 17.91V4.95C8.44003 3.33 7.11003 2 5.49003 2Z" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round"/>
+                                                        <path d="M8.44003 7H2.53003" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round"/>
+                                                        </svg>    
+                                                    </div>
+                                                    <div class="category-item-link-name color--blue">BC diện tích sử dụng</div>
+                                            </li>
+                                            <li class="category-item tab-table2">
+                                                    <div class="category-item-link-icon bg--red">
+                                                        <svg class="category-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 2V5" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16 2V5" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M21 8.5V13.63C20.11 12.92 18.98 12.5 17.75 12.5C16.52 12.5 15.37 12.93 14.47 13.66C13.26 14.61 12.5 16.1 12.5 17.75C12.5 18.73 12.78 19.67 13.26 20.45C13.63 21.06 14.11 21.59 14.68 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 11H13" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 16H9.62" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M23 17.75C23 18.73 22.72 19.67 22.24 20.45C21.96 20.93 21.61 21.35 21.2 21.69C20.28 22.51 19.08 23 17.75 23C16.6 23 15.54 22.63 14.68 22C14.11 21.59 13.63 21.06 13.26 20.45C12.78 19.67 12.5 18.73 12.5 17.75C12.5 16.1 13.26 14.61 14.47 13.66C15.37 12.93 16.52 12.5 17.75 12.5C18.98 12.5 20.11 12.92 21 13.63C22.22 14.59 23 16.08 23 17.75Z" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17.75 20.25C17.75 18.87 18.87 17.75 20.25 17.75C18.87 17.75 17.75 16.63 17.75 15.25C17.75 16.63 16.63 17.75 15.25 17.75C16.63 17.75 17.75 18.87 17.75 20.25Z" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>      
+                                                    </div>
+                                                    <div class="category-item-link-name color--red">BC công nợ tổng hợp</div>
+                                            </li>
+                                            <li class="category-item tab-table3">
+                                                    <div class="category-item-link-icon bg--violet">
+                                                        <svg class="category-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 2V5" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16 2V5" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 13H15" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 17H12" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16 3.5C19.33 3.68 21 4.95 21 9.65V15.83C21 19.95 20 22.01 15 22.01H9C4 22.01 3 19.95 3 15.83V9.65C3 4.95 4.67 3.69 8 3.5H16Z" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>       
+                                                    </div>
+                                                    <div class="category-item-link-name color--violet">BC sổ kế toán(QTM)</div>
+                                            </li>
+                                            <li class="category-item tab-table4">
+                                                    <div class="category-item-link-icon bg--green">
+                                                        <svg class="category-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 12.2H15" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M8 16.2H12.38" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M10 6H14C16 6 16 5 16 4C16 2 15 2 14 2H10C9 2 8 2 8 4C8 6 9 6 10 6Z" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16 4.02C19.33 4.2 21 5.43 21 10V16C21 20 20 22 15 22H9C4 22 3 20 3 16V10C3 5.44 4.67 4.2 8 4.02" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>      
+                                                    </div>
+                                                    <div class="category-item-link-name color--green">Báo cáo yêu cầu</div>
+                                            </li>
+                                        </ul>
+                                    <div class="category-selects">
+                                        <h3 class="category-selects-heading">
+                                            Chọn dự án để tải bảng dữ liệu
+                                        </h3>
+                                            <div class="category-selects-options select-options">
+                                                <select>
+                                                  <option value="0">Chọn dự án:</option>
+                                                  <option value="1">TTC</option>
+                                                  <option value="2">DIP_VN</option>
+                                                  <option value="3">SwanBay</option>
+                                                  <option value="4">133TH</option>
+                                                  <option value="5">30NX</option>
+                                                  <option value="6">SwanPark</option>
+                                                  <option value="7">Him Lam Land</option>
+                                                  <option value="8">EHOMES</option>
+                                                  <option value="9">DUANNEW</option>
+                                                  <option value="10">DIP HCM</option>
+                                                  <option value="11">DIP.MT</option>
+                                                  <option value="12">DIP TEST</option>
+                                                </select>
+                                              </div>
+                                              <div class="category-selects-options select-options select--options2">
+                                                <select>
+                                                  <option value="0">Chọn khối nhà:</option>
+                                                  <option value="1"></option>
+                                                  <option value="2">Block B</option>
+                                                  <option value="3">Block C</option>
+                                                  <option value="4">TTCAP</option>
+                                                  <option value="5">133 Thái Hà</option>
+                                                  <option value="6">30/168 Nguyễn Xuyến</option>
+                                                  <option value="7">11 Nguyễn Xuyến</option>
+                                                  <option value="8">15 Nguyễn Xuyến</option>
+                                                  <option value="9">Block D</option>
+                                                </select>
+                                            </div>
+                                        <div class="category-selects-btn btn">Tải bảng dữ liệu</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-9">
+                                <!-- Report-Usable-Area Table -->
+                                <div class="report-usable-area_table data-sheet tab-table1 show">
+                                    <div class="report_table-selects table-tools">
+                                        <div class="btn-tools-wrap">
+                                            <div class="report_table-dropdown dropdown">
+                                                <label style="cursor: pointer;" class="check-show-dropdown"><ion-icon name="ellipsis-vertical" class="dropdown-icon"></ion-icon></label>
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-item">
+                                                        <a class="dropdown-item-link">
+                                                            <svg class="dropdown-item-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13 11L21.2 2.80005" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 6.8V2H17.2" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg> 
+                                                            <span>Xuất file</span></a>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a class="dropdown-item-link">
+                                                            <svg class="dropdown-item-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M17 13.4V16.4C17 20.4 15.4 22 11.4 22H7.6C3.6 22 2 20.4 2 16.4V12.6C2 8.6 3.6 7 7.6 7H10.6" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M17.0001 13.4H13.8001C11.4001 13.4 10.6001 12.6 10.6001 10.2V7L17.0001 13.4Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M11.6001 2H15.6001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 5C7 3.34 8.34 2 10 2H12.62" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M21.9999 8V14.19C21.9999 15.74 20.7399 17 19.1899 17" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 8H19C16.75 8 16 7.25 16 5V2L22 8Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            <span>Sao chép file</span></a>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a class="dropdown-item-link">
+                                                            <svg class="dropdown-item-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M9 11V17L11 15" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M9 17L7 15" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            <span>Tải file</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="report_table-data table-wrap">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="table-field-row">
+                                                    <th class="table-field-col">Dự án</th>
+                                                    <th class="table-field-col">Tổng diện tích</th>
+                                                    <th class="table-field-col">Căn hộ sử dụng</th>
+                                                    <th class="table-field-col">Văn phòng sử dụng</th>
+                                                    <th class="table-field-col">Khác</th>
+                                                    <th class="table-field-col">Tổng diện tích sử dụng</th>
+                                                    <th class="table-field-col">Căn hộ còn trống</th>
+                                                    <th class="table-field-col">Văn phòng còn trống</th>
+                                                    <th class="table-field-col">khác</th>
+                                                    <th class="table-field-col">Tổng diện tích còn trống</th>
+                                                    <th class="table-field-col">Tỷ lệ lấp đầy</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">120,510 m2</td>
+                                                    <td class="table-value-col">4,950 m2</td>
+                                                    <td class="table-value-col">794 m2</td>
+                                                    <td class="table-value-col">2,234 m2</td>
+                                                    <td class="table-value-col">7,978 m2</td>
+                                                    <td class="table-value-col">108,737 m2</td>
+                                                    <td class="table-value-col">2,599 m2</td>
+                                                    <td class="table-value-col">894 m2</td>
+                                                    <td class="table-value-col">112,230 m2</td>
+                                                    <td class="table-value-col">6.62 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">DIP MIỀN TRUNG</td>
+                                                    <td class="table-value-col">100 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">100 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">100 m2</td>
+                                                    <td class="table-value-col">0.00 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">DIP Nha Trang</td>
+                                                    <td class="table-value-col">1,300 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">300 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">1,000 m2</td>
+                                                    <td class="table-value-col">1,300 m2</td>
+                                                    <td class="table-value-col">0.00 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">DIP TEST 1</td>
+                                                    <td class="table-value-col">1,200 m2</td>
+                                                    <td class="table-value-col">400 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">400 m2</td>
+                                                    <td class="table-value-col">800 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">800 m2</td>
+                                                    <td class="table-value-col">33.33 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">DIP Việt Nam</td>
+                                                    <td class="table-value-col">2,342.5 m2</td>
+                                                    <td class="table-value-col">1,334.1 m2</td>
+                                                    <td class="table-value-col">668.3 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">2,124.4 m2</td>
+                                                    <td class="table-value-col">66 m2</td>
+                                                    <td class="table-value-col">80 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">218.1 m2</td>
+                                                    <td class="table-value-col">90.69 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">DIPT</td>
+                                                    <td class="table-value-col">100 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0.00 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">EHOMES</td>
+                                                    <td class="table-value-col">340 m2</td>
+                                                    <td class="table-value-col">90 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">90 m2</td>
+                                                    <td class="table-value-col">150 m2</td>
+                                                    <td class="table-value-col">100 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">250 m2</td>
+                                                    <td class="table-value-col">26.47 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">HAPPY ONE</td>
+                                                    <td class="table-value-col">395 m2</td>
+                                                    <td class="table-value-col">10 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">10 m2</td>
+                                                    <td class="table-value-col">300 m2</td>
+                                                    <td class="table-value-col">85 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">385 m2</td>
+                                                    <td class="table-value-col">2.53 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Panaroma</td>
+                                                    <td class="table-value-col">2,540 m2</td>
+                                                    <td class="table-value-col">150 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">500 m2</td>
+                                                    <td class="table-value-col">650 m2</td>
+                                                    <td class="table-value-col">590 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">1,300 m2</td>
+                                                    <td class="table-value-col">1,890 m2</td>
+                                                    <td class="table-value-col">25.59 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">PY- SALA</td>
+                                                    <td class="table-value-col">840 m2</td>
+                                                    <td class="table-value-col">670 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">670 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">79.76 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">SwanBay</td>
+                                                    <td class="table-value-col">231.5 m2</td>
+                                                    <td class="table-value-col">231.5 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">231.5 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">100.00 %</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">THE GRAND MANHATTAN	</td>
+                                                    <td class="table-value-col">545 m2</td>
+                                                    <td class="table-value-col">306 m2</td>
+                                                    <td class="table-value-col">100 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">406 m2</td>
+                                                    <td class="table-value-col">90 m2</td>
+                                                    <td class="table-value-col">49 m2</td>
+                                                    <td class="table-value-col">0 m2</td>
+                                                    <td class="table-value-col">139 m2</td>
+                                                    <td class="table-value-col">74.50 %</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="report_table-pagination pagination">
+                                        <li class="pagination-item">
+                                        <a href="#" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon pagination-item-icon--disabled" name="caret-back"></ion-icon>
+                                        </a></li>
+                                        <li class="pagination-item pagination-item-current"><a href="" class="pagination-item-link">1</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">2</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">3</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon" name="caret-forward"></ion-icon>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Report-General-Debt Table -->
+                                <div class="report-general-debt_table data-sheet tab-table2">
+                                   
+                                    <div class="report_table-data">
+                                        <div class="report_table-chart-list">
+                                            <div class="report_table-chart-item">
+                                                <h3 class="report_table-chart-item-heading">
+                                                    Biểu đồ cột
+                                                </h3>
+                                                <div class="report_table-chart-item-body" style="width: 100%; height: 500px;">
+                                                    <canvas id="chart-column"></canvas>
+                                                </div>
+                                            </div>
+                                            <div class="report_table-chart-item">
+                                                <h3 class="report_table-chart-item-heading">
+                                                    Biểu đồ tròn
+                                                </h3>
+                                                <div class="report_table-chart-item-body">
+                                                    <canvas id="chart-pie"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Report-Bookkeeping Table -->
+                                <div class="report-bookkeeping_table data-sheet tab-table3">
+                                    <div class="report_table-selects table-tools">
+                                        <div class="search-card">
+                                            <input type="text" placeholder="Tìm kiếm thông tin..." class="search-card-input">
+                                            <svg class="search-card-icon btn-icon btn-icon--search" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M22 22L20 20" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>    
+                                        </div>
+                                        <div class="btn-tools-wrap">
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-filter btn">
+                                                    <svg class="btn-icon btn-icon--filter" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.34997 2H12.25C12.99 2 13.6 2.61001 13.6 3.35001V4.82999C13.6 5.36999 13.26 6.04 12.93 6.38L10.03 8.94C9.63003 9.28 9.35998 9.94999 9.35998 10.49V13.39C9.35998 13.79 9.09 14.33 8.75 14.54L7.81 15.15C6.93 15.69 5.71997 15.08 5.71997 14V10.43C5.71997 9.95999 5.44999 9.35001 5.17999 9.01001L2.61999 6.31C2.27999 5.97 2.01001 5.36999 2.01001 4.95999V3.41C2.00001 2.61 2.60997 2 3.34997 2Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M2 12V15C2 20 4 22 9 22H15C20 22 22 20 22 15V9C22 5.88 21.22 3.91999 19.41 2.89999C18.9 2.60999 17.88 2.38999 16.95 2.23999" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M13 13H18" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 17H18" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        Lọc
+                                                </button>
+                                                <div class="screen"></div>
+                                                <div class="table-filter">
+                                                    <div class="table-filter__header">
+                                                        <h3 class="table-filter-heading">Bộ lọc yêu cầu</h3>
+                                                    </div>
+                                                    <div class="table-filter__body">
+                                                        <input type="date" class="table-filter__body-input">
+                                                        <input type="date" class="table-filter__body-input">
+                                                    </div>
+                                                    <div class="table-filter__footer">
+                                                        <button class="table-filter-btn table-filter-btn--filter bg--blue">Lọc</button>
+                                                        <button class="table-filter-btn table-filter-btn--close">Đóng</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="report_table-dropdown dropdown">
+                                                <label style="cursor: pointer;" class="check-show-dropdown"><ion-icon name="ellipsis-vertical" class="dropdown-icon"></ion-icon></label>
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-item">
+                                                        <a class="dropdown-item-link">
+                                                            <svg class="dropdown-item-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13 11L21.2 2.80005" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 6.8V2H17.2" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg> 
+                                                            <span>Xuất file</span></a>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a class="dropdown-item-link">
+                                                            <svg class="dropdown-item-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M17 13.4V16.4C17 20.4 15.4 22 11.4 22H7.6C3.6 22 2 20.4 2 16.4V12.6C2 8.6 3.6 7 7.6 7H10.6" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M17.0001 13.4H13.8001C11.4001 13.4 10.6001 12.6 10.6001 10.2V7L17.0001 13.4Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M11.6001 2H15.6001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 5C7 3.34 8.34 2 10 2H12.62" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M21.9999 8V14.19C21.9999 15.74 20.7399 17 19.1899 17" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 8H19C16.75 8 16 7.25 16 5V2L22 8Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            <span>Sao chép file</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="report_table-data table-wrap">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="table-field-row">
+                                                    <th class="table-field-col">STT</th>
+                                                    <th class="table-field-col">Ngày hoạch toán</th>
+                                                    <th class="table-field-col">Số phiếu thu</th>
+                                                    <th class="table-field-col">Số phiếu chi</th>
+                                                    <th class="table-field-col">Mã khách hàng</th>
+                                                    <th class="table-field-col">Người nhận/ người nộp</th>
+                                                    <th class="table-field-col">Diễn giải</th>
+                                                    <th class="table-field-col">Thu</th>
+                                                    <th class="table-field-col">Chi</th>
+                                                    <th class="table-field-col">Tồn quỹ</th>
+                                                    <th class="table-field-col">Người thu/chi</th>
+                                                    <th class="table-field-col">Loại chi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col">Số tồn đầu kỳ</td>
+                                                    <td class="table-value-col">0</td>
+                                                    <td class="table-value-col">0</td>
+                                                    <td class="table-value-col">-790,000</td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col">Tổng cộng</td>
+                                                    <td class="table-value-col">0</td>
+                                                    <td class="table-value-col">0</td>
+                                                    <td class="table-value-col">0</td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="report_table-pagination pagination">
+                                        <li class="pagination-item">
+                                        <a href="#" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon pagination-item-icon--disabled" name="caret-back"></ion-icon>
+                                        </a></li>
+                                        <li class="pagination-item pagination-item-current"><a href="" class="pagination-item-link">1</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">2</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">3</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon" name="caret-forward"></ion-icon>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Report-Request Table -->
+                                <div class="report-request_table data-sheet tab-table4">
+                                    <div class="report_table-selects table-tools">
+                                        <div class="btn-tools-wrap hidden">
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-add btn">
+                                                    <svg class="btn-icon btn-icon--add" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 12H18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12 18V6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>    
+                                                    Thêm
+                                                </button>
+                                            </div>
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-edit btn">
+                                                    <svg class="btn-icon btn-icon--edit" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16.0399 3.02001L8.15988 10.9C7.85988 11.2 7.55988 11.79 7.49988 12.22L7.06988 15.23C6.90988 16.32 7.67988 17.08 8.76988 16.93L11.7799 16.5C12.1999 16.44 12.7899 16.14 13.0999 15.84L20.9799 7.96001C22.3399 6.60001 22.9799 5.02001 20.9799 3.02001C18.9799 1.02001 17.3999 1.66001 16.0399 3.02001Z" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M14.9099 4.15002C15.5799 6.54002 17.4499 8.41002 19.8499 9.09002" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>    
+                                                    Sửa
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="report_table-data">
+                                        <div class="report_table-chart-list">
+                                            <div class="row">
+                                                <div class="col l-6">
+                                                    <div class="report_table-chart-item">
+                                                        <h3 class="report_table-chart-item-heading">
+                                                            Tình trạng xử lý
+                                                        </h3>
+                                                        <div class="report_table-chart-item-body">
+                                                            <canvas id="chart-processing-status"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col l-6">
+                                                    <div class="report_table-chart-item">
+                                                        <h3 class="report_table-chart-item-heading">
+                                                            Mức độ
+                                                        </h3>
+                                                        <div class="report_table-chart-item-body">
+                                                            <canvas id="chart-level"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col l-6">
+                                                    <div class="report_table-chart-item">
+                                                        <h3 class="report_table-chart-item-heading">
+                                                            Nguồn tiếp cận
+                                                        </h3>
+                                                        <div class="report_table-chart-item-body">
+                                                            <canvas id="chart-source"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col l-6">
+                                                    <div class="report_table-chart-item">
+                                                        <h3 class="report_table-chart-item-heading">
+                                                            Nguồn tiếp nhận
+                                                        </h3>
+                                                        <div class="report_table-chart-item-body">
+                                                            <canvas id="chart-source2"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Main footer -->
+            <div class="main_footer">
+                <p class="footer-copyright">Landsoft Building © 2020</p>
+                <a href="" class="footer-fanpage">
+                    <ion-icon class="footer-fanpage-icon" name="logo-facebook"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-youtube"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-linkedin"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-google"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <!-- Form Add -->
+        <div class="frm frm--add">
+            <div class="frm__container">
+                <header class="frm__header">
+                    <h3 class="frm__header-heading">Thêm mặt bằng</h3>                  
+                    <svg class="frm__header-close btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.17004 14.83L14.83 9.16998" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.83 14.83L9.17004 9.16998" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </header>
+                <div class="frm__body">
+                    <div class="row">
+                        <div class="col l-6 separator--dashed">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Mã số</label>
+                                <input type="text" class="frm__body-input">
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Khối nhà</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn khối nhà--</option>
+                                        <option value="1"></option>
+                                        <option value="2">Block B</option>
+                                        <option value="3">Block C</option>
+                                        <option value="4">TTCAP</option>
+                                        <option value="5">133 Thái Hà</option>
+                                        <option value="6">30/168 Nguyễn Xuyến</option>
+                                        <option value="7">11 Nguyễn Xuyến</option>
+                                        <option value="8">15 Nguyễn Xuyến</option>
+                                        <option value="9">Block D</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Loại mặt bằng</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn loại mặt bằng--</option>
+                                        <option value="1">Căn hộ</option>
+                                        <option value="2">Shophouse</option>
+                                        <option value="3">TH2</option>
+                                        <option value="4">Văn Phòng</option>
+                                        <option value="5">Sử dụng nội bộ</option>
+                                        <option value="6">Phòng họp</option>
+                                        <option value="7">phòng công cộng</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Diện tích</label>
+                                <input type="text" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Chủ sở hữu</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn chủ sở hữu--</option>
+                                        <option value="1">DIP_VNH/8230</option>
+                                        <option value="2">THANH.MAI</option>
+                                        <option value="3">NA.LE</option>
+                                        <option value="4">THANG.NGUYEN</option>
+                                        <option value="5">HAI.TRAN</option>
+                                        <option value="6">TUAN.TU</option>
+                                        <option value="7">HAN.LE</option>
+                                        <option value="8">HOAI.THANH</option>
+                                        <option value="9">THANH.HAI</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Ngày vào ở</label>
+                                <input type="date" class="frm__body-input">
+                            </div>
+                        </div>
+                        <div class="col l-6">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Số nhà</label>
+                                <input type="text" class="frm__body-input">
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Tầng/Lầu</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn tầng/lầu--</option>
+                                        <option value="1">Tầng 2</option>
+                                        <option value="2">Tầng 3</option>
+                                        <option value="3">Tầng 4</option>
+                                        <option value="4">Tầng 5</option>
+                                        <option value="5">Tầng 6</option>
+                                        <option value="6">Tầng 7</option>
+                                        <option value="7">Tầng 8</option>
+                                        <option value="8">Tầng 9</option>
+                                        <option value="9">Tầng 10</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Trạng thái</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn trạng thái--</option>
+                                        <option value="1">Chuyển nhà thầu xử lý</option>
+                                        <option value="2">Bàn giao nội bộ thành công</option>
+                                        <option value="3">Bàn giao nội bộ thành công (Có lỗi)</option>
+                                        <option value="4">Chờ bàn giao khách hàng</option>
+                                        <option value="5">Bàn giao không thành công (Có lỗi)</option>
+                                        <option value="6">Đã bàn giao thành công</option>
+                                        <option value="7">Đã giao nhà</option>
+                                        <option value="8">Bàn giao thành công có lỗi</option>
+                                        <option value="9">Mặc nhiên bàn giao</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Giá thuê</label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" class="frm__body-input-1">
+                                    <div class="frm__body-input-2 select-options">
+                                        <select>
+                                            <option value="0">VNĐ</option>
+                                            <option value="1">VNĐ</option>
+                                            <option value="2">USD</option>
+                                            <option value="3">SDG</option>
+                                            <option value="4">Eur</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Khách thuê</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn khách thuê--</option>
+                                        <option value="1">DIP_VNH/8230</option>
+                                        <option value="2">THANH.MAI</option>
+                                        <option value="3">NA.LE</option>
+                                        <option value="4">THANG.NGUYEN</option>
+                                        <option value="5">HAI.TRAN</option>
+                                        <option value="6">TUAN.TU</option>
+                                        <option value="7">HAN.LE</option>
+                                        <option value="8">HOAI.THANH</option>
+                                        <option value="9">THANH.HAI</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Căn hộ cá nhân</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Not set--</option>
+                                        <option value="1">True</option>
+                                        <option value="2">False</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                        <textarea  name="info" class="frm__body-note">Nhập chú thích...
+                        </textarea>
+                    </div>
+                </div>
+                <footer class="frm__footer">
+                    <button class="frm__footer-btn btn">Lưu</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Form Edit -->
+        <div class="frm frm--edit">
+            <div class="frm__container">
+                <header class="frm__header">
+                    <h3 class="frm__header-heading">Cập nhật mặt bằng</h3>                  
+                    <svg class="frm__header-close btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.17004 14.83L14.83 9.16998" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.83 14.83L9.17004 9.16998" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </header>
+                <div class="frm__body">
+                    <div class="row">
+                        <div class="col l-6 separator--dashed">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Mã số</label>
+                                <input type="text" placeholder="DEMO" class="frm__body-input disabled" disabled>
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Khối nhà</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">11 Nguyễn Xuyến</option>
+                                        <option value="1"></option>
+                                        <option value="2">Block B</option>
+                                        <option value="3">Block C</option>
+                                        <option value="4">TTCAP</option>
+                                        <option value="5">133 Thái Hà</option>
+                                        <option value="6">30/168 Nguyễn Xuyến</option>
+                                        <option value="7">11 Nguyễn Xuyến</option>
+                                        <option value="8">15 Nguyễn Xuyến</option>
+                                        <option value="9">Block D</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Loại mặt bằng</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">Văn Phòng</option>
+                                        <option value="1">Căn hộ</option>
+                                        <option value="2">Shophouse</option>
+                                        <option value="3">TH2</option>
+                                        <option value="4">Văn Phòng</option>
+                                        <option value="5">Sử dụng nội bộ</option>
+                                        <option value="6">Phòng họp</option>
+                                        <option value="7">phòng công cộng</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Diện tích</label>
+                                <input type="text" placeholder="75 m2" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Chủ sở hữu</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">DIP_VNH/8230</option>
+                                        <option value="1">DIP_VNH/8230</option>
+                                        <option value="2">THANH.MAI</option>
+                                        <option value="3">NA.LE</option>
+                                        <option value="4">THANG.NGUYEN</option>
+                                        <option value="5">HAI.TRAN</option>
+                                        <option value="6">TUAN.TU</option>
+                                        <option value="7">HAN.LE</option>
+                                        <option value="8">HOAI.THANH</option>
+                                        <option value="9">THANH.HAI</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Ngày vào ở</label>
+                                <input type="date" class="frm__body-input">
+                            </div>
+                        </div>
+                        <div class="col l-6">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Số nhà</label>
+                                <input type="text" placeholder="11" class="frm__body-input">
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Tầng/Lầu</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">Tầng 1</option>
+                                        <option value="1">Tầng 2</option>
+                                        <option value="2">Tầng 3</option>
+                                        <option value="3">Tầng 4</option>
+                                        <option value="4">Tầng 5</option>
+                                        <option value="5">Tầng 6</option>
+                                        <option value="6">Tầng 7</option>
+                                        <option value="7">Tầng 8</option>
+                                        <option value="8">Tầng 9</option>
+                                        <option value="9">Tầng 10</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Trạng thái</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">Chờ bàn giao nội bộ</option>
+                                        <option value="1">Chuyển nhà thầu xử lý</option>
+                                        <option value="2">Bàn giao nội bộ thành công</option>
+                                        <option value="3">Bàn giao nội bộ thành công (Có lỗi)</option>
+                                        <option value="4">Chờ bàn giao khách hàng</option>
+                                        <option value="5">Bàn giao không thành công (Có lỗi)</option>
+                                        <option value="6">Đã bàn giao thành công</option>
+                                        <option value="7">Đã giao nhà</option>
+                                        <option value="8">Bàn giao thành công có lỗi</option>
+                                        <option value="9">Mặc nhiên bàn giao</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Giá thuê</label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="15,000,000" class="frm__body-input-1">
+                                    <div class="frm__body-input-2 select-options">
+                                        <select>
+                                            <option value="0">VNĐ</option>
+                                            <option value="1">VNĐ</option>
+                                            <option value="2">USD</option>
+                                            <option value="3">SDG</option>
+                                            <option value="4">Eur</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Khách thuê</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">DIP_VNH/8230</option>
+                                        <option value="1">DIP_VNH/8230</option>
+                                        <option value="2">THANH.MAI</option>
+                                        <option value="3">NA.LE</option>
+                                        <option value="4">THANG.NGUYEN</option>
+                                        <option value="5">HAI.TRAN</option>
+                                        <option value="6">TUAN.TU</option>
+                                        <option value="7">HAN.LE</option>
+                                        <option value="8">HOAI.THANH</option>
+                                        <option value="9">THANH.HAI</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Căn hộ cá nhân</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">True</option>
+                                        <option value="1">True</option>
+                                        <option value="2">False</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                        <textarea  name="info" class="frm__body-note">Nhập chú thích...
+                        </textarea>
+                    </div>
+                </div>
+                <footer class="frm__footer">
+                    <button class="frm__footer-btn btn">Lưu</button>
+                </footer>
+            </div>
+        </div>
+        <script src="./assets/javascript/charts.js"></script>
+    </div>
+
+    <!-- Javascript -->
+    <script src="./assets/javascript/main.js"></script>
+</body>
+</html>

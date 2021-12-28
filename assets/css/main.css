@@ -1,10 +1,7 @@
-#container {
-    background-color: var(--white-color);
-}
-
 /* Header Slider-Bar */
 .header_sliderbar {
     position: fixed;
+    z-index: 1;
     width: var(--sliderbar-width);
     height: 100%;
     padding-left: 10px;
@@ -73,8 +70,7 @@
     .header_sliderbar-item:hover .header_sliderbar-item-link,
     .header_sliderbar-item.hovered .header_sliderbar-item-link {
         color: var(--primary-color);
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
+        border-radius: 50px 0 0 50px;
         background-color: var(--white-color);
     }
 
@@ -126,7 +122,7 @@
 .main {
     position: relative;
     width: calc(100% - var(--sliderbar-width));
-    min-height: 100vh;
+    height: 100vh;
     left: var(--sliderbar-width);
     padding: 0 20px;
     transition: 0.5s;
@@ -156,6 +152,8 @@
         position: relative;
         cursor: pointer;
         padding: 0 4px;
+        margin-left: 10px;
+        color: var(--text-color);
     }
 
     .header_btn-toggle:active {
@@ -184,7 +182,8 @@
         display: flex;
         align-items: center;
         font-size: 1.4rem;
-        color: var(--text-color);
+        color: var(--sub-text-color);
+        cursor: pointer;
     }
 
     .header_topbar-item-link {
@@ -195,8 +194,9 @@
 
     .header_topbar-language {
         height: 25px;
-        border-radius: 50px;
-        background-color: rgba(143, 185, 236, 0.2);
+        border-radius: 8px;
+        padding: 0 12px;
+        background-color: rgba(143, 185, 236, 0.09);
         cursor: pointer;
     }
 
@@ -234,7 +234,7 @@
         margin-left: 4px;
         font-size: 1.4rem;
         font-weight: 500;
-        color: var(--text-color);
+        color: var(--sub-text-color);
     }
 
 
@@ -287,8 +287,9 @@
 
 /*Main Body */
 .body {
+    display: none;
     width: 100%;
-    margin: 24px 0 31px;
+    margin: 24px 0 51px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 7px 30px rgb(0 0 0 / 6%);
@@ -296,7 +297,7 @@
 
 /* Body Data-Table (Khách Hàng, Dự Án, Căn Hộ */
 .home_cart {
-    margin-bottom: 42px;
+    margin-bottom: 32px;
 }
 
 .body_data-table {
@@ -305,6 +306,7 @@
     align-items: center;
     height: 130px;
     border-radius: 20px;
+    margin: 10px 0;
     text-decoration: none;
     box-shadow: 0px 16px 24px rgb(0 0 0 / 4%), 0px 2px 6px rgb(0 0 0 / 2%), 0px 0px 1px rgb(0 0 0 / 2%);
 }
@@ -348,6 +350,14 @@
     padding: 10px;
 }
 
+.sub {
+    position: absolute;
+    top: 100%;
+    width: 200px;
+    height: 200px;
+    background-color: #a3a2a2;
+}
+
 .body_fee-item-separator::before {
     content: "";
     position: absolute;
@@ -362,10 +372,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 8px 0 40px;
+    margin: 8px 0 30px;
 }
 
 .body_fee-heading-name {
+    height: 2.6rem;
+    line-height: 2.6rem;
     margin: 0;
     font-size: 2.4rem;
     color: var(--primary-color);
@@ -382,16 +394,10 @@
     background-color: #eeeeee;
 }
 
-.body_fee-data-desc-wrap {
-    margin-top: 20px;
+.body_fee-data {
+    width: 359px;
+    height: 344px;
 }
-
-.body_fee-data-desc {
-    margin: 10px 0 0;
-    font-size: 1.4rem;
-    color: var(--sub-text-color);
-}
-
 
 /* Body Diary-Job */
 .body_diaryjob {
@@ -685,18 +691,14 @@
     color: var(--sub-text-color);
 }
 
-.project, .premises {
-    
-}
-
 /* Project Select Tools */
 
-.project_table-data, .premises_table-data {
-    overflow-x: auto;
+.table-wrap {
+    height: 412.8px;
+    overflow: auto;
 }
 
 .project_sub-table {
-    height: 100%;
     border-radius: 10px;
     padding: 15px 20px 20px;
     border: 1px solid rgb(73, 133, 245, 0.2);
@@ -704,14 +706,16 @@
 
 .project_sub-table-heading {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .project_sub-table-heading-name {
+    height: 40px;
+    line-height: 40px;
     margin: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 11px;
+    padding: 0 11px;
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--sub-text-color);
@@ -723,60 +727,32 @@
     color: var(--primary-color);
 }
 
-.project_sub-table-data {
-    overflow-y: auto;
+/* Table-Chart Report */
+.report_table-chart-list {
+
 }
 
-/* Premises */
-.premises-category {
-    position: relative;
+.report_table-chart-item {
+    margin: 20px 0;
+    border-radius: 20px;
+    padding: 20px 10px;
+    box-shadow: 0px 16px 24px rgb(0 0 0 / 6%), 0px 2px 6px rgb(0 0 0 / 4%), 0px 0px 1px rgb(0 0 0 / 4%);
 }
 
-.premises-category-selects {
-    width: 90%;
-    margin-top: 20px;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: rgba(143, 185, 236, 0.1);
-}
-
-.premises-category-selects-heading {
-    margin: 0 0 10px;
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: var(--sub-text-color);
-}
-
-.premises-category-selects-cb {
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(143, 185, 236, 0.2);
-    cursor: pointer;
-}
-
-.premises-category-selects-cb-name {
-    padding: 13px 5px 13px 0;
-    font-size: 1.6rem;
+.report_table-chart-item-heading {
+    font-size: 2rem;
     font-weight: 500;
+    margin: 0;
+    padding: 6px 10px;
     color: var(--primary-color);
 }
 
-.premises-category-selects-cb-icon {
-    width: 16px;
-    height: 16px;
-}
-
-.premises-category-selects-btn {
-    margin-top: 20px;
-    border: 1px solid #dddddd;
-    color: var(--sub-text-color);
-    background-color: var(--white-color);
-}
-
-.premises-category-selects-btn:hover {
-    background-color: rgba(143, 185, 236, 0.5);
+.report_table-chart-item-body {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 
 
@@ -784,18 +760,18 @@
 .main_footer {
     height: 60px;
     padding: 0 20px;
-    background-color: var(--primary-color);
+    background-color: var(--white-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 25px 25px 0 0;
-    box-shadow: 0 -2px 10px rgb(238, 238, 238, 0.9);
+    box-shadow:  0px -2px 30px rgba(0, 0, 0, 0.08);
 }
 
 .footer-copyright {
     font-size: 1.4rem;
     font-weight: 500;
-    color: var(--white-color);
+    color: var(--primary-color);
 }
 
 .footer-fanpage {
@@ -805,12 +781,19 @@
 
 .footer-fanpage-icon {
     padding: 0 4px;
-    color: var(--white-color);
+    color: var(--primary-color);
 }
 
 .footer-fanpage-icon:hover {
     color: var(--primary-color);
 }
+
+/* show */
+.showpage {
+    display: block;
+}
+
+
 
 
 

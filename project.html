@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="https://demobuilding.dip.vn/DL/img/logo-ico-dip.png">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <title>DIP MienTrung</title>
+    <title>Cổng thông tin quản lý dự án</title>
 </head>
 <body>
     <div id="container">
         <!-- Header Slider-Bar -->
+        <div class="overlay"></div>
         <nav class="header_sliderbar">
             <!-- Header Logo -->
             <a href="" class="header_logo">
@@ -47,7 +50,7 @@
                     </label>
                 </li>
                 <li class="header_sliderbar-item">
-                    <a href="#" class="header_sliderbar-item-link">
+                    <a href="./customer.html" class="header_sliderbar-item-link">
                         <ion-icon class="header_sliderbar-item-icon" name="people-outline"></ion-icon>
                         <div class="header_sliderbar-item-label">
                             Khách Hàng
@@ -55,7 +58,7 @@
                     </a>
                 </li>
                 <li class="header_sliderbar-item">
-                    <a href="#" class="header_sliderbar-item-link">
+                    <a href="./manager.html" class="header_sliderbar-item-link">
                         <ion-icon class="header_sliderbar-item-icon" name="book-outline"></ion-icon>
                         <div class="header_sliderbar-item-label">
                             Quản Lý
@@ -63,7 +66,7 @@
                     </a>
                 </li>
                 <li class="header_sliderbar-item">
-                    <a href="#" class="header_sliderbar-item-link">
+                    <a href="./request.html" class="header_sliderbar-item-link">
                         <ion-icon class="header_sliderbar-item-icon" name="id-card-outline"></ion-icon>
                         <div class="header_sliderbar-item-label">
                             Yêu Cầu
@@ -71,7 +74,7 @@
                     </a>
                 </li>
                 <li class="header_sliderbar-item">
-                    <a href="#" class="header_sliderbar-item-link">
+                    <a href="./report.html" class="header_sliderbar-item-link">
                         <ion-icon class="header_sliderbar-item-icon" name="clipboard-outline"></ion-icon>
                         <div class="header_sliderbar-item-label">
                             Báo Cáo
@@ -79,7 +82,7 @@
                     </a>
                 </li>
                 <li class="header_sliderbar-item">
-                    <a href="#" class="header_sliderbar-item-link">
+                    <a href="./service.html" class="header_sliderbar-item-link">
                         <ion-icon class="header_sliderbar-item-icon" name="help-circle-outline"></ion-icon>
                         <div class="header_sliderbar-item-label">
                             Dịch Vụ Cơ Bản
@@ -87,13 +90,13 @@
                     </a>
                 </li>
                 <li class="header_sliderbar-item">
-                    <a href="#" class="header_sliderbar-item-link">
+                    <a href="./zalo.html" class="header_sliderbar-item-link">
                         <ion-icon class="header_sliderbar-item-icon" name="chatbubbles-outline"></ion-icon>
                         <div class="header_sliderbar-item-label">
                             Zalo
                         </div>
                     </a>
-                </li>
+                </li>   
                 <li class="header_sliderbar-item">
                     <a href="#" class="header_sliderbar-item-link">
                         <ion-icon class="header_sliderbar-item-icon" name="log-out-outline"></ion-icon>
@@ -126,7 +129,7 @@
                         <!-- Header User -->
                         <li class="header_topbar-item header_topbar-user">
                             <ion-icon class="header_topbar-user-icon" name="person-outline"></ion-icon>
-                            <span class="header_topbar-user-name">ADMIN</span>
+                            <span class="header_topbar-user-name">Admin</span>
                         </li>
                     </ul>
                 </nav>
@@ -138,14 +141,14 @@
                     </div>
                     <!-- Header PageBar-list -->
                     <ul class="header_pagebar-list">
-                        <li class="header_pagebar-item header_pagebar-item--current"><a href="" class="header_pagebar-link">Danh sách</a></li>
-                        <li class="header_pagebar-item"><a href="" class="header_pagebar-link">Mặt bằng</a></li>
+                        <li class="header_pagebar-item header_pagebar-item--current"><a href="" class="header_pagebar-link">Dự án</a></li>
+                        <li class="header_pagebar-item"><a href="./premises.html" class="header_pagebar-link">Mặt bằng</a></li>
                     </ul>
                 </div>  
             </div>
 
             <!--Main Body -->
-            <div class="body">
+            <div class="body showpage">
                 <div class="grid">
                     <div class="project">
                         <div class="row ">
@@ -153,32 +156,46 @@
                                 <div class="project_table">
                                     <div class="project_table-selects table-tools">
                                         <div class="search-card">
-                                            <ion-icon name="search-outline" class="search-card-icon"></ion-icon>
                                             <input type="text" placeholder="Tìm kiếm thông tin..." class="search-card-input">
+                                            <svg class="search-card-icon btn-icon btn-icon--search" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M22 22L20 20" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>  
                                         </div>
-                                        <div class="btn-tools">
-                                            <a href="" class="btn-tools-link">
-                                                <button class="btn-tools-add btn btn--primary">
-                                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <div class="btn-tools-wrap">
+                                            <div class="btn-tools hidden">
+                                                <button class="btn-tools-filter btn">
+                                                    <svg class="btn-icon btn-icon--filter" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.34997 2H12.25C12.99 2 13.6 2.61001 13.6 3.35001V4.82999C13.6 5.36999 13.26 6.04 12.93 6.38L10.03 8.94C9.63003 9.28 9.35998 9.94999 9.35998 10.49V13.39C9.35998 13.79 9.09 14.33 8.75 14.54L7.81 15.15C6.93 15.69 5.71997 15.08 5.71997 14V10.43C5.71997 9.95999 5.44999 9.35001 5.17999 9.01001L2.61999 6.31C2.27999 5.97 2.01001 5.36999 2.01001 4.95999V3.41C2.00001 2.61 2.60997 2 3.34997 2Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M2 12V15C2 20 4 22 9 22H15C20 22 22 20 22 15V9C22 5.88 21.22 3.91999 19.41 2.89999C18.9 2.60999 17.88 2.38999 16.95 2.23999" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M13 13H18" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 17H18" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        Lọc
+                                                </button>
+                                            </div>
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-add btn">
+                                                    <svg class="btn-icon btn-icon--add" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M6 12H18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                     <path d="M12 18V6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                     </svg>    
                                                     Thêm
                                                 </button>
-                                            </a>
-                                            <a href="" class="btn-tools-link">
+                                            </div>
+                                            <div class="btn-tools">
                                                 <button class="btn-tools-edit btn">
-                                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <svg class="btn-icon btn-icon--edit" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                     <path d="M16.0399 3.02001L8.15988 10.9C7.85988 11.2 7.55988 11.79 7.49988 12.22L7.06988 15.23C6.90988 16.32 7.67988 17.08 8.76988 16.93L11.7799 16.5C12.1999 16.44 12.7899 16.14 13.0999 15.84L20.9799 7.96001C22.3399 6.60001 22.9799 5.02001 20.9799 3.02001C18.9799 1.02001 17.3999 1.66001 16.0399 3.02001Z" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                                     <path d="M14.9099 4.15002C15.5799 6.54002 17.4499 8.41002 19.8499 9.09002" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                                     </svg>    
                                                     Sửa
                                                 </button>
-                                            </a>
-                                            <a class="btn-tools-link">
+                                            </div>
+                                            <div class="btn-tools">
                                                 <button class="btn-tools-delete btn">
-                                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <svg class="btn-icon .btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M8.80994 2L5.18994 5.63" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                                     <path d="M15.1899 2L18.8099 5.63" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                                     <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#fff" stroke-width="1.5"/>
@@ -188,11 +205,11 @@
                                                     </svg>       
                                                     Xóa
                                                 </button>
-                                            </a>
+                                            </div>
                                             <div class="project_table-dropdown dropdown">
                                                 <label style="cursor: pointer;" for="check-show-dropdown"><ion-icon name="ellipsis-vertical" class="dropdown-icon"></ion-icon></label>
                                                 <input type="checkbox" hidden id="check-show-dropdown" class="show-dropdown">
-                                                <label for="check-show-dropdown" class="overlay"></label>
+                                                <label for="check-show-dropdown"></label>
                                                 <ul class="dropdown-list">
                                                     <li class="dropdown-item">
                                                         <a href="" class="dropdown-item-link">
@@ -239,168 +256,192 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="project_table-data">
+                                    <div class="project_table-data table-wrap">
                                         <table class="table">
-                                            <tr class="table-field-row">
-                                                <th class="table-field-col"></th>
-                                                <th class="table-field-col">Mã dự án</th>
-                                                <th class="table-field-col">Tên dự án</th>
-                                                <th class="table-field-col">Địa chỉ</th>
-                                                <th class="table-field-col">Điện thoại</th>
-                                                <th class="table-field-col">Fax</th>
-                                                <th class="table-field-col">Email</th>
-                                                <th class="table-field-col">Website</th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">TTC</th>
-                                                <th class="table-value-col">TTC</th>
-                                                <th class="table-value-col">06 Trương Định, quận 1, TP HCM</th>
-                                                <th class="table-value-col">0285991991</th>
-                                                <th class="table-value-col">123</th>
-                                                <th class="table-value-col">Tcc@gmail.com</th>
-                                                <th class="table-value-col">tcc.com</th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">DIP_VN</th>
-                                                <th class="table-value-col">DIP Việt Nam</th>
-                                                <th class="table-value-col">DIP VietNam</th>
-                                                <th class="table-value-col">013456784</th>
-                                                <th class="table-value-col">123</th>
-                                                <th class="table-value-col">dip@gmail.com</th>
-                                                <th class="table-value-col">dipvn.com</th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">SwanBay</th>
-                                                <th class="table-value-col">SwanBay</th>
-                                                <th class="table-value-col"></th>
-                                                <th class="table-value-col"></th>
-                                                <th class="table-value-col"></th>
-                                                <th class="table-value-col">swanBay@gmail.com</th>
-                                                <th class="table-value-col">swanBay.com</th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">133TH</th>
-                                                <th class="table-value-col">31 ngõ 133 Thái Hà</th>
-                                                <th class="table-value-col">số 32 ngõ 133 Thái Hà, P.Trung Liệt, Q. Đống Đa</th>
-                                                <th class="table-value-col">0916514190</th>
-                                                <th class="table-value-col">123</th>
-                                                <th class="table-value-col">tothuanpntd@gmail.com</th>
-                                                <th class="table-value-col">tcc.com</th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">30NX</th>
-                                                <th class="table-value-col">30/168 Nguyễn Xiển</th>
-                                                <th class="table-value-col">30/168 Nguyễn Xiển, P. Thanh Xuân</th>
-                                                <th class="table-value-col">0966993817</th>
-                                                <th class="table-value-col"></th>
-                                                <th class="table-value-col">thuanicp@gmail.com</th>
-                                                <th class="table-value-col"></th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</th>
-                                                <th class="table-value-col">(028) 710 66 777</th>
-                                                <th class="table-value-col">123531</th>
-                                                <th class="table-value-col">sales@dip.vn</th>
-                                                <th class="table-value-col">sales.com</th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</th>
-                                                <th class="table-value-col">(028) 710 66 777</th>
-                                                <th class="table-value-col">123531</th>
-                                                <th class="table-value-col">sales@dip.vn</th>
-                                                <th class="table-value-col">sales.com</th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</th>
-                                                <th class="table-value-col">(028) 710 66 777</th>
-                                                <th class="table-value-col">123531</th>
-                                                <th class="table-value-col">sales@dip.vn</th>
-                                                <th class="table-value-col">sales.com</th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</th>
-                                                <th class="table-value-col">(028) 710 66 777</th>
-                                                <th class="table-value-col">123531</th>
-                                                <th class="table-value-col">sales@dip.vn</th>
-                                                <th class="table-value-col">sales.com</th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <label for="table-value-checking" class="table-value-col-check">
-                                                        <input type="checkbox" hidden id="table-value-checking" class="table-value-check">
-                                                        <div class="table-value-col-checker"></div>
-                                                    </label>
-                                                </th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">DIP HCM</th>
-                                                <th class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</th>
-                                                <th class="table-value-col">(028) 710 66 777</th>
-                                                <th class="table-value-col">123531</th>
-                                                <th class="table-value-col">sales@dip.vn</th>
-                                                <th class="table-value-col">sales.com</th>
-                                            </tr>
+                                            <thead>
+                                                <tr class="table-field-row">
+                                                    <th class="table-field-col"></th>
+                                                    <th class="table-field-col">Mã dự án</th>
+                                                    <th class="table-field-col">Tên dự án</th>
+                                                    <th class="table-field-col">Địa chỉ</th>
+                                                    <th class="table-field-col">Điện thoại</th>
+                                                    <th class="table-field-col">Fax</th>
+                                                    <th class="table-field-col">Email</th>
+                                                    <th class="table-field-col">Website</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">TTC</td>
+                                                    <td class="table-value-col">TTC</td>
+                                                    <td class="table-value-col">06 Trương Định, quận 1, TP HCM</td>
+                                                    <td class="table-value-col">0285991991</td>
+                                                    <td class="table-value-col">123</td>
+                                                    <td class="table-value-col">Tcc@gmail.com</td>
+                                                    <td class="table-value-col">tcc.com</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">DIP_VN</td>
+                                                    <td class="table-value-col">DIP Việt Nam</td>
+                                                    <td class="table-value-col">DIP VietNam</td>
+                                                    <td class="table-value-col">013456784</td>
+                                                    <td class="table-value-col">123</td>
+                                                    <td class="table-value-col">dip@gmail.com</td>
+                                                    <td class="table-value-col">dipvn.com</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">SwanBay</td>
+                                                    <td class="table-value-col">SwanBay</td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col">swanBay@gmail.com</td>
+                                                    <td class="table-value-col">swanBay.com</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">133TH</td>
+                                                    <td class="table-value-col">31 ngõ 133 Thái Hà</td>
+                                                    <td class="table-value-col">số 32 ngõ 133 Thái Hà, P.Trung Liệt, Q. Đống Đa</td>
+                                                    <td class="table-value-col">0916514190</td>
+                                                    <td class="table-value-col">123</td>
+                                                    <td class="table-value-col">tothuanpntd@gmail.com</td>
+                                                    <td class="table-value-col">tcc.com</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">30NX</td>
+                                                    <td class="table-value-col">30/168 Nguyễn Xiển</td>
+                                                    <td class="table-value-col">30/168 Nguyễn Xiển, P. Thanh Xuân</td>
+                                                    <td class="table-value-col">0966993817</td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col">thuanicp@gmail.com</td>
+                                                    <td class="table-value-col"></td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</td>
+                                                    <td class="table-value-col">(028) 710 66 777</td>
+                                                    <td class="table-value-col">123531</td>
+                                                    <td class="table-value-col">sales@dip.vn</td>
+                                                    <td class="table-value-col">sales.com</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</td>
+                                                    <td class="table-value-col">(028) 710 66 777</td>
+                                                    <td class="table-value-col">123531</td>
+                                                    <td class="table-value-col">sales@dip.vn</td>
+                                                    <td class="table-value-col">sales.com</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</td>
+                                                    <td class="table-value-col">(028) 710 66 777</td>
+                                                    <td class="table-value-col">123531</td>
+                                                    <td class="table-value-col">sales@dip.vn</td>
+                                                    <td class="table-value-col">sales.com</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</td>
+                                                    <td class="table-value-col">(028) 710 66 777</td>
+                                                    <td class="table-value-col">123531</td>
+                                                    <td class="table-value-col">sales@dip.vn</td>
+                                                    <td class="table-value-col">sales.com</td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">DIP HCM</td>
+                                                    <td class="table-value-col">Tầng 29, Tòa nhà Ellipse Tower, 110 Trần Phú, Quận Hà Đông, Thành phố Hà Nội</td>
+                                                    <td class="table-value-col">(028) 710 66 777</td>
+                                                    <td class="table-value-col">123531</td>
+                                                    <td class="table-value-col">sales@dip.vn</td>
+                                                    <td class="table-value-col">sales.com</td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                     <ul class="project_table-pagination pagination">
@@ -424,125 +465,127 @@
                                         <h3 class="project_sub-table-heading-name project_sub-table-heading-name--active">Nhân viên</h3>
                                         <h3 class="project_sub-table-heading-name">Hotline</h3>
                                     </div>
-                                    <div class="project_sub-table-data">
+                                    <div class="project_sub-table-data table-wrap">
                                         <table class="table">
-                                            <tr class="table-field-row">
-                                                <th class="table-field-col">Nhân viên xử lý</th>
-                                                <th class="table-field-col"></th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <div class="table-value-col-wrap">
-                                                        <div class="table-value-col-info">
-                                                            Lê Hồng Ân
+                                            <thead>
+                                                <tr class="table-field-row">
+                                                    <th class="table-field-col">Nhân viên xử lý</th>
+                                                    <th class="table-field-col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-select-options select-options">
+                                                            <select>
+                                                                <option value="0">Chọn nhân viên:</option>
+                                                                <option value="1">Trần Thị Thủy</option>
+                                                                <option value="2">Nguyễn Thị Ánh</option>
+                                                                <option value="3">Nguyễn Thị Linh</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="table-value-col-dropdown">
-                                                            <svg class="table-value-col-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M19.92 8.95001L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.07999 8.95001" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>   
-                                                        </div> 
-                                                    </div>
-                                                </th>
-                                                <th class="table-value-col">
-                                                    <div class="table-value-col-tools">
-                                                        <div class="table-value-col-tools-item table-value-col-tools-item--edit">
-                                                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#31dd42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M16.0399 3.02001L8.15988 10.9C7.85988 11.2 7.55988 11.79 7.49988 12.22L7.06988 15.23C6.90988 16.32 7.67988 17.08 8.76988 16.93L11.7799 16.5C12.1999 16.44 12.7899 16.14 13.0999 15.84L20.9799 7.96001C22.3399 6.60001 22.9799 5.02001 20.9799 3.02001C18.9799 1.02001 17.3999 1.66001 16.0399 3.02001Z" stroke="#31dd42" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M14.9099 4.15002C15.5799 6.54002 17.4499 8.41002 19.8499 9.09002" stroke="#31dd42" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>  
+                                                    </td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
                                                         </div>
-                                                        <div class="table-value-col-tools-item table-value-col-tools-item--delete">
-                                                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
-                                                            <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
-                                                            <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
-                                                            <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
-                                                            </svg>    
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-select-options select-options">
+                                                            <select>
+                                                                <option value="0">Chọn nhân viên:</option>
+                                                                <option value="1">Trần Thị Thủy</option>
+                                                                <option value="2">Nguyễn Thị Ánh</option>
+                                                                <option value="3">Nguyễn Thị Linh</option>
+                                                            </select>
                                                         </div>
-                                                    </div>
-                                                </th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <div class="table-value-col-wrap">
-                                                        <div class="table-value-col-info">
-                                                            Nguyễn Thị Hạnh
+                                                    </td>
+                                                    <td class="table-value-col">
+                                                         <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
                                                         </div>
-                                                        <div class="table-value-col-dropdown">
-                                                            <svg class="table-value-col-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M19.92 8.95001L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.07999 8.95001" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>   
-                                                        </div> 
-                                                    </div>
-                                                </th>
-                                                <th class="table-value-col">
-                                                     <div class="table-value-col-tools">
-                                                        <div class="table-value-col-tools-item table-value-col-tools-item--edit">
-                                                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#31dd42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M16.0399 3.02001L8.15988 10.9C7.85988 11.2 7.55988 11.79 7.49988 12.22L7.06988 15.23C6.90988 16.32 7.67988 17.08 8.76988 16.93L11.7799 16.5C12.1999 16.44 12.7899 16.14 13.0999 15.84L20.9799 7.96001C22.3399 6.60001 22.9799 5.02001 20.9799 3.02001C18.9799 1.02001 17.3999 1.66001 16.0399 3.02001Z" stroke="#31dd42" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M14.9099 4.15002C15.5799 6.54002 17.4499 8.41002 19.8499 9.09002" stroke="#31dd42" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>  
+                                                    </td>
+                                                </tr>   
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-select-options select-options">
+                                                            <select>
+                                                                <option value="0">Chọn nhân viên:</option>
+                                                                <option value="1">Trần Thị Thủy</option>
+                                                                <option value="2">Nguyễn Thị Ánh</option>
+                                                                <option value="3">Nguyễn Thị Linh</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="table-value-col-tools-item table-value-col-tools-item--delete">
-                                                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
-                                                            <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
-                                                            <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
-                                                            <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
-                                                            </svg>    
                                                         </div>
-                                                    </div>
-                                                </th>
-                                            </tr>
-                                            <tr class="table-value-row">
-                                                <th class="table-value-col">
-                                                    <div class="table-value-col-wrap">
-                                                        <div class="table-value-col-info">
-                                                            Trần Thị thủy
+                                                    </td>
+                                                    <td class="table-value-col">
+                                                         <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
                                                         </div>
-                                                        <div class="table-value-col-dropdown">
-                                                            <svg class="table-value-col-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M19.92 8.95001L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.07999 8.95001" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>   
-                                                        </div> 
-                                                    </div>
-                                                </th>
-                                                <th class="table-value-col">
-                                                     <div class="table-value-col-tools">
-                                                        <div class="table-value-col-tools-item table-value-col-tools-item--edit">
-                                                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#31dd42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M16.0399 3.02001L8.15988 10.9C7.85988 11.2 7.55988 11.79 7.49988 12.22L7.06988 15.23C6.90988 16.32 7.67988 17.08 8.76988 16.93L11.7799 16.5C12.1999 16.44 12.7899 16.14 13.0999 15.84L20.9799 7.96001C22.3399 6.60001 22.9799 5.02001 20.9799 3.02001C18.9799 1.02001 17.3999 1.66001 16.0399 3.02001Z" stroke="#31dd42" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M14.9099 4.15002C15.5799 6.54002 17.4499 8.41002 19.8499 9.09002" stroke="#31dd42" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>  
-                                                        </div>
-                                                        <div class="table-value-col-tools-item table-value-col-tools-item--delete">
-                                                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
-                                                            <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
-                                                            <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
-                                                            <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
-                                                            </svg>    
-                                                        </div>
-                                                    </div>
-                                                </th>
-                                            </tr>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
             <!--Main footer -->
             <div class="main_footer">
@@ -555,7 +598,367 @@
                     <ion-icon class="footer-fanpage-icon" name="logo-twitter"></ion-icon>
                 </a>
             </div>
+    </div>
+
+        <!-- Form -->
+        <!-- Form Add -->
+        <div class="frm frm--add">
+            <div class="frm__container">
+                <header class="frm__header">
+                    <h3 class="frm__header-heading">Thêm dự án</h3>                  
+                    <svg class="frm__header-close btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.17004 14.83L14.83 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.83 14.83L9.17004 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </header>
+                <div class="frm__body">
+                    <div class="row">
+                        <div class="col l-6 separator--dashed">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Mã số</label>
+                                <input type="text" class="frm__body-input">
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Khối nhà</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn khối nhà--</option>
+                                        <option value="1">Block A</option>
+                                        <option value="2">Block B</option>
+                                        <option value="3">Block C</option>
+                                        <option value="4">TTCAP</option>
+                                        <option value="5">133 Thái Hà</option>
+                                        <option value="6">30/168 Nguyễn Xuyến</option>
+                                        <option value="7">11 Nguyễn Xuyến</option>
+                                        <option value="8">15 Nguyễn Xuyến</option>
+                                        <option value="9">Block D</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Loại mặt bằng</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn loại mặt bằng--</option>
+                                        <option value="1">Căn hộ</option>
+                                        <option value="2">Shophouse</option>
+                                        <option value="3">TH2</option>
+                                        <option value="4">Văn Phòng</option>
+                                        <option value="5">Sử dụng nội bộ</option>
+                                        <option value="6">Phòng họp</option>
+                                        <option value="7">phòng công cộng</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Diện tích</label>
+                                <input type="text" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Chủ sở hữu</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn chủ sở hữu--</option>
+                                        <option value="1">DIP_VNH/8230</option>
+                                        <option value="2">THANH.MAI</option>
+                                        <option value="3">NA.LE</option>
+                                        <option value="4">THANG.NGUYEN</option>
+                                        <option value="5">HAI.TRAN</option>
+                                        <option value="6">TUAN.TU</option>
+                                        <option value="7">HAN.LE</option>
+                                        <option value="8">HOAI.THANH</option>
+                                        <option value="9">THANH.HAI</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Ngày vào ở</label>
+                                <input type="date" class="frm__body-input">
+                            </div>
+                        </div>
+                        <div class="col l-6">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Số nhà</label>
+                                <input type="text" class="frm__body-input">
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Tầng/Lầu</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn tầng/lầu--</option>
+                                        <option value="1">Tầng 2</option>
+                                        <option value="2">Tầng 3</option>
+                                        <option value="3">Tầng 4</option>
+                                        <option value="4">Tầng 5</option>
+                                        <option value="5">Tầng 6</option>
+                                        <option value="6">Tầng 7</option>
+                                        <option value="7">Tầng 8</option>
+                                        <option value="8">Tầng 9</option>
+                                        <option value="9">Tầng 10</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Trạng thái</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn trạng thái--</option>
+                                        <option value="1">Chuyển nhà thầu xử lý</option>
+                                        <option value="2">Bàn giao nội bộ thành công</option>
+                                        <option value="3">Bàn giao nội bộ thành công (Có lỗi)</option>
+                                        <option value="4">Chờ bàn giao khách hàng</option>
+                                        <option value="5">Bàn giao không thành công (Có lỗi)</option>
+                                        <option value="6">Đã bàn giao thành công</option>
+                                        <option value="7">Đã giao nhà</option>
+                                        <option value="8">Bàn giao thành công có lỗi</option>
+                                        <option value="9">Mặc nhiên bàn giao</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Giá thuê</label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" class="frm__body-input-1">
+                                    <div class="frm__body-input-2 select-options">
+                                        <select>
+                                            <option value="0">VNĐ</option>
+                                            <option value="1">VNĐ</option>
+                                            <option value="2">USD</option>
+                                            <option value="3">SDG</option>
+                                            <option value="4">Eur</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Khách thuê</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Chọn khách thuê--</option>
+                                        <option value="1">DIP_VNH/8230</option>
+                                        <option value="2">THANH.MAI</option>
+                                        <option value="3">NA.LE</option>
+                                        <option value="4">THANG.NGUYEN</option>
+                                        <option value="5">HAI.TRAN</option>
+                                        <option value="6">TUAN.TU</option>
+                                        <option value="7">HAN.LE</option>
+                                        <option value="8">HOAI.THANH</option>
+                                        <option value="9">THANH.HAI</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Căn hộ cá nhân</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">--Not set--</option>
+                                        <option value="1">True</option>
+                                        <option value="2">False</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                        <textarea  name="info" class="frm__body-note">Nhập chú thích...
+                        </textarea>
+                    </div>
+                </div>
+                <footer class="frm__footer">
+                    <button class="frm__footer-btn btn">Lưu</button>
+                </footer>
+            </div>
         </div>
+
+        <!-- Form Edit -->
+        <div class="frm frm--edit">
+            <div class="frm__container">
+                <header class="frm__header">
+                    <h3 class="frm__header-heading">Cập nhật mặt bằng</h3>                  
+                    <svg class="frm__header-close btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.17004 14.83L14.83 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.83 14.83L9.17004 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </header>
+                <div class="frm__body">
+                    <div class="row">
+                        <div class="col l-6 separator--dashed">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Mã số</label>
+                                <input type="text" placeholder="DEMO" class="frm__body-input disabled" disabled>
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Khối nhà</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">11 Nguyễn Xuyến</option>
+                                        <option value="1">Block A</option>
+                                        <option value="2">Block B</option>
+                                        <option value="3">Block C</option>
+                                        <option value="4">TTCAP</option>
+                                        <option value="5">133 Thái Hà</option>
+                                        <option value="6">30/168 Nguyễn Xuyến</option>
+                                        <option value="7">11 Nguyễn Xuyến</option>
+                                        <option value="8">15 Nguyễn Xuyến</option>
+                                        <option value="9">Block D</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Loại mặt bằng</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">Văn Phòng</option>
+                                        <option value="1">Căn hộ</option>
+                                        <option value="2">Shophouse</option>
+                                        <option value="3">TH2</option>
+                                        <option value="4">Văn Phòng</option>
+                                        <option value="5">Sử dụng nội bộ</option>
+                                        <option value="6">Phòng họp</option>
+                                        <option value="7">phòng công cộng</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Diện tích</label>
+                                <input type="text" placeholder="75 m2" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Chủ sở hữu</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">DIP_VNH/8230</option>
+                                        <option value="1">DIP_VNH/8230</option>
+                                        <option value="2">THANH.MAI</option>
+                                        <option value="3">NA.LE</option>
+                                        <option value="4">THANG.NGUYEN</option>
+                                        <option value="5">HAI.TRAN</option>
+                                        <option value="6">TUAN.TU</option>
+                                        <option value="7">HAN.LE</option>
+                                        <option value="8">HOAI.THANH</option>
+                                        <option value="9">THANH.HAI</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Ngày vào ở</label>
+                                <input type="date" class="frm__body-input">
+                            </div>
+                        </div>
+                        <div class="col l-6">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Số nhà</label>
+                                <input type="text" placeholder="11" class="frm__body-input">
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Tầng/Lầu</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">Tầng 1</option>
+                                        <option value="1">Tầng 2</option>
+                                        <option value="2">Tầng 3</option>
+                                        <option value="3">Tầng 4</option>
+                                        <option value="4">Tầng 5</option>
+                                        <option value="5">Tầng 6</option>
+                                        <option value="6">Tầng 7</option>
+                                        <option value="7">Tầng 8</option>
+                                        <option value="8">Tầng 9</option>
+                                        <option value="9">Tầng 10</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Trạng thái</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">Chờ bàn giao nội bộ</option>
+                                        <option value="1">Chuyển nhà thầu xử lý</option>
+                                        <option value="2">Bàn giao nội bộ thành công</option>
+                                        <option value="3">Bàn giao nội bộ thành công (Có lỗi)</option>
+                                        <option value="4">Chờ bàn giao khách hàng</option>
+                                        <option value="5">Bàn giao không thành công (Có lỗi)</option>
+                                        <option value="6">Đã bàn giao thành công</option>
+                                        <option value="7">Đã giao nhà</option>
+                                        <option value="8">Bàn giao thành công có lỗi</option>
+                                        <option value="9">Mặc nhiên bàn giao</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Giá thuê</label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="15,000,000" class="frm__body-input-1">
+                                    <div class="frm__body-input-2 select-options">
+                                        <select>
+                                            <option value="0">VNĐ</option>
+                                            <option value="1">VNĐ</option>
+                                            <option value="2">USD</option>
+                                            <option value="3">SDG</option>
+                                            <option value="4">Eur</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Khách thuê</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">DIP_VNH/8230</option>
+                                        <option value="1">DIP_VNH/8230</option>
+                                        <option value="2">THANH.MAI</option>
+                                        <option value="3">NA.LE</option>
+                                        <option value="4">THANG.NGUYEN</option>
+                                        <option value="5">HAI.TRAN</option>
+                                        <option value="6">TUAN.TU</option>
+                                        <option value="7">HAN.LE</option>
+                                        <option value="8">HOAI.THANH</option>
+                                        <option value="9">THANH.HAI</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label">Căn hộ cá nhân</label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0">True</option>
+                                        <option value="1">True</option>
+                                        <option value="2">False</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                        <textarea  name="info" class="frm__body-note">Nhập chú thích...
+                        </textarea>
+                    </div>
+                </div>
+                <footer class="frm__footer">
+                    <button class="frm__footer-btn btn">Lưu</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Table-Filter -->
+    <div class="screen screen--table-filter">
+        <div class="table-filter">
+            <div class="table-filter__header">
+                <h3 class="table-filter-heading">Bộ lọc khách hàng</h3>
+            </div>
+            <div class="table-filter__body">
+                <div class="table-filter__body-input select-options">
+                    <select>
+                      <option value="0">Khách hàng cá nhân</option>
+                      <option value="1">Khách hàng cá nhân</option>
+                      <option value="2">Khách hàng doanh nghiệp</option>
+                      <option value="3">Nhà cung cấp</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="table-filter__footer">
+                    <button class="table-filter-btn table-filter-btn--filter bg--blue">Lọc</button>
+                    <button class="table-filter-btn table-filter-btn--close">Đóng</button>
+            </div>
+        </div>
+    </div>
     </div>
 
     <!-- Javascript -->

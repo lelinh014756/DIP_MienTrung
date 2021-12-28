@@ -1,0 +1,74 @@
+/* Tablet ( > 740px ) */
+@media (min-width: 46.25em) { 
+
+}
+
+/* PC độ phân giải thấp ( 1024px - 1239px ) */
+@media (min-width: 64em) and (max-width: 77.4375em) {
+
+}
+
+/* Tablet && PC thấp */
+@media (min-width: 46.25em) and (max-width: 77.4375em) {
+    .overlay {
+        display: none;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .main {
+        left: 0;
+        width: 100%;
+    }
+    
+    .main.active {
+        width: 100%;
+        left: 0;
+    }
+
+    /* Header Slider-Bar List */
+    .header_sliderbar {
+        width: 0;
+        padding-left: 0;
+    }
+
+    .header_sliderbar.active {
+        width: var(--sliderbar-width);
+    }
+
+    .header_sliderbar-item {
+        width: 100%;
+    }
+
+    .header_sliderbar-item:hover .header_sliderbar-item-link,
+    .header_sliderbar-item.hovered .header_sliderbar-item-link {
+        color: var(--primary-color);
+        border-radius: 0 25px 25px 0 ;
+        background-color: var(--white-color);
+    }
+
+    .header_sliderbar-item:hover .header_sliderbar-item-link::before,
+    .header_sliderbar-item.hovered .header_sliderbar-item-link::before {
+        display: none;
+    }
+
+    .header_sliderbar-item:hover .header_sliderbar-item-link::after,
+    .header_sliderbar-item.hovered .header_sliderbar-item-link::after {
+        display: none;
+    }
+}
+
+/* PC độ phân giải cao */
+@media (min-width: 77.4375em) {
+    .main {
+        width: calc(100% - var(--sliderbar-width));
+        left: var(--sliderbar-width);
+    }
+    
+    .main.active {
+        width: calc(100% - var(--sliderbar-mini-width));
+        left: var(--sliderbar-mini-width);
+    }
+}

@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="https://demobuilding.dip.vn/DL/img/logo-ico-dip.png">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Cổng thông tin quản lý dự án</title>
+</head>
+<body>
+    <div id="container">
+        <!-- Header Slider-Bar -->
+        <div class="overlay"></div>
+        <nav class="header_sliderbar">
+            <!-- Header Logo -->
+            <a href="" class="header_logo">
+                <span class="header_logo-img-wrap"><div class="header_logo-img" style="background-image: url(./assets/img/logo.jpg);"></div></span>
+                <div class="header_logo-name">DIP Việt Nam</div>
+            </a>
+            <!-- Header Slider-Bar List -->
+            <ul class="header_sliderbar-list">
+                <li class="header_sliderbar-item">
+                    <a href="./index.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="home-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Trang Chủ
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <label for="input-subbar">
+                        <input hidden type="checkbox" id="input-subbar" class="show-subbar">
+                        <a href="./project.html" class="header_sliderbar-item-link">
+                            <ion-icon class="header_sliderbar-item-icon" name="stats-chart-outline"></ion-icon>
+                            <div class="header_sliderbar-item-label">
+                                Dự Án
+                            </div>
+                        </a>
+                    </label>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./customer.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="people-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Khách Hàng
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./manager.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="book-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Quản Lý
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="id-card-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Yêu Cầu
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./report.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="clipboard-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Báo Cáo
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./service.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="help-circle-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Dịch Vụ Cơ Bản
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="./zalo.html" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="chatbubbles-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Zalo
+                        </div>
+                    </a>
+                </li>
+                <li class="header_sliderbar-item">
+                    <a href="#" class="header_sliderbar-item-link">
+                        <ion-icon class="header_sliderbar-item-icon" name="log-out-outline"></ion-icon>
+                        <div class="header_sliderbar-item-label">
+                            Đăng Xuất
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Main -->
+        <div class="main">
+            <!--Main Header -->
+            <div class="header">
+                <!-- Header TopBar -->
+                <nav class="header_topbar">
+                    <!-- Header Button Toggle -->
+                    <div class="header_btn-toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                    <!-- Header TopBar-List -->
+                    <ul class="header_topbar-list">
+                        <li class="header_topbar-item header_topbar-language">
+                            Ngôn Ngữ
+                            <ion-icon class="icon-arrow" name="chevron-down-outline"></ion-icon>
+                        </li>
+                        <li class="header_topbar-item header_topbar-notify separator">
+                                <ion-icon class="header_topbar-notify-icon" name="notifications-outline"></ion-icon>
+                        </li>
+                        <!-- Header User -->
+                        <li class="header_topbar-item header_topbar-user">
+                            <ion-icon class="header_topbar-user-icon" name="person-outline"></ion-icon>
+                            <span class="header_topbar-user-name">Admin</span>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Header PageBar -->
+                <div class="header_pagebar">
+                    <!-- Header Page-Name -->
+                    <div class="header_pagebar-name">
+                        Yêu cầu
+                    </div>
+                </div>  
+            </div>
+
+            <!--Main Body -->
+            <div class="body showpage">
+                <div class="grid">
+                    <div class="customer">
+                        <div class="row ">
+                            <div class="col l-3">
+                                <!-- Customer-Category -->
+                                    <div class="customer-category category separator">
+                                        <div class="category_heading">
+                                            <h3 class="category_heading-name">Danh mục</h3>
+                                        </div>
+                                        <ul class="category-list">
+                                            <li class="category-item tab-table1 category-item--active">
+                                                    <div class="category-item-link-icon bg--special">
+                                                        <svg class="category-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 12.2H15" stroke="#6E9AED" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M8 16.2H12.38" stroke="#6E9AED" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M10 6H14C16 6 16 5 16 4C16 2 15 2 14 2H10C9 2 8 2 8 4C8 6 9 6 10 6Z" stroke="#6E9AED" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16 4.02C19.33 4.2 21 5.43 21 10V16C21 20 20 22 15 22H9C4 22 3 20 3 16V10C3 5.44 4.67 4.2 8 4.02" stroke="#6E9AED" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="category-item-link-name" style="color: #6E9AED;">Danh sách Yêu cầu</div>
+                                            </li>
+                                            <li class="category-item tab-table2">
+                                                    <div class="category-item-link-icon bg--orange">
+                                                        <svg class="category-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.5 9.5L12.3 13.7L10.7 11.3L7.5 14.5" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M14.5 9.5H16.5V11.5" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#ECF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>    
+                                                    </div>
+                                                    <div class="category-item-link-name color--orange">Trạng thái yêu cầu</div>
+                                            </li>
+                                            <li class="category-item tab-table3">
+                                                    <div class="category-item-link-icon bg--green">
+                                                        <svg class="category-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M8 13H12" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M8 17H16" stroke="#ECF3FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>    
+                                                    </div>
+                                                    <div class="category-item-link-name color--green">Loại Yêu cầu</div>
+                                            </li>
+                                        </ul>
+                                        <div class="category-selects">
+                                            <h3 class="category-selects-heading">
+                                                Chọn dự án để tải bảng dữ liệu
+                                            </h3>
+                                                <div class="category-selects-options select-options">
+                                                    <select>
+                                                      <option value="0">Chọn dự án:</option>
+                                                      <option value="1">TTC</option>
+                                                      <option value="2">DIP_VN</option>
+                                                      <option value="3">SwanBay</option>
+                                                      <option value="4">133TH</option>
+                                                      <option value="5">30NX</option>
+                                                      <option value="6">SwanPark</option>
+                                                      <option value="7">Him Lam Land</option>
+                                                      <option value="8">EHOMES</option>
+                                                      <option value="9">DUANNEW</option>
+                                                      <option value="10">DIP HCM</option>
+                                                      <option value="11">DIP.MT</option>
+                                                      <option value="12">DIP TEST</option>
+                                                    </select>
+                                                  </div>
+                                            <div class="category-selects-btn btn">Tải bảng dữ liệu</div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col l-9">
+                                <!-- request-Table -->
+                                <div class="request_table data-sheet tab-table1 show">
+                                    <div class="request_table-selects table-tools">
+                                        <div class="search-card">
+                                            <input type="text" placeholder="Tìm kiếm thông tin..." class="search-card-input">
+                                            <svg class="search-card-icon btn-icon btn-icon--search" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M22 22L20 20" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>    
+                                        </div>
+                                        <div class="btn-tools-wrap">
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-filter btn">
+                                                    <svg class="btn-icon btn-icon--filter" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.34997 2H12.25C12.99 2 13.6 2.61001 13.6 3.35001V4.82999C13.6 5.36999 13.26 6.04 12.93 6.38L10.03 8.94C9.63003 9.28 9.35998 9.94999 9.35998 10.49V13.39C9.35998 13.79 9.09 14.33 8.75 14.54L7.81 15.15C6.93 15.69 5.71997 15.08 5.71997 14V10.43C5.71997 9.95999 5.44999 9.35001 5.17999 9.01001L2.61999 6.31C2.27999 5.97 2.01001 5.36999 2.01001 4.95999V3.41C2.00001 2.61 2.60997 2 3.34997 2Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M2 12V15C2 20 4 22 9 22H15C20 22 22 20 22 15V9C22 5.88 21.22 3.91999 19.41 2.89999C18.9 2.60999 17.88 2.38999 16.95 2.23999" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M13 13H18" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M11 17H18" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        Lọc
+                                                </button>
+                                                <div class="screen"></div>
+                                                <div class="table-filter">
+                                                    <div class="table-filter__header">
+                                                        <h3 class="table-filter-heading">Bộ lọc yêu cầu</h3>
+                                                    </div>
+                                                    <div class="table-filter__body">
+                                                        <input type="date" class="table-filter__body-input">
+                                                        <input type="date" class="table-filter__body-input">
+                                                    </div>
+                                                    <div class="table-filter__footer">
+                                                        <button class="table-filter-btn table-filter-btn--filter bg--blue">Lọc</button>
+                                                        <button class="table-filter-btn table-filter-btn--close">Đóng</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-add btn">
+                                                    <svg class="btn-icon btn-icon--add" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 12H18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12 18V6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>    
+                                                    Thêm
+                                                </button>
+                                            </div>
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-edit btn">
+                                                    <svg class="btn-icon btn-icon--edit" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16.0399 3.02001L8.15988 10.9C7.85988 11.2 7.55988 11.79 7.49988 12.22L7.06988 15.23C6.90988 16.32 7.67988 17.08 8.76988 16.93L11.7799 16.5C12.1999 16.44 12.7899 16.14 13.0999 15.84L20.9799 7.96001C22.3399 6.60001 22.9799 5.02001 20.9799 3.02001C18.9799 1.02001 17.3999 1.66001 16.0399 3.02001Z" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M14.9099 4.15002C15.5799 6.54002 17.4499 8.41002 19.8499 9.09002" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>    
+                                                    Sửa
+                                                </button>
+                                            </div>
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-delete btn">
+                                                    <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="btn-icon-color" d="M8.80994 2L5.18994 5.63" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path class="btn-icon-color" d="M15.1899 2L18.8099 5.63" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path class="btn-icon-color" d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#fff" stroke-width="1.5"/>
+                                                    <path class="btn-icon-color" d="M9.76001 14V17.55" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                                                    <path class="btn-icon-color" d="M14.3601 14V17.55" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                                                    <path class="btn-icon-color" d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                                                    </svg>       
+                                                    Xóa
+                                                </button>
+                                            </div>
+                                            <div class="request_table-dropdown dropdown">
+                                                <label style="cursor: pointer;" for="check-show-dropdown"><ion-icon name="ellipsis-vertical" class="dropdown-icon"></ion-icon></label>
+                                                <input type="checkbox" hidden id="check-show-dropdown" class="show-dropdown">
+                                                <label for="check-show-dropdown"></label>
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-item">
+                                                        <a href="" class="dropdown-item-link">
+                                                            <svg class="dropdown-item-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 2L13.8 10.2" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M13 6.16992V10.9999H17.83" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            <span>Nhập file</span></a>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a class="dropdown-item-link">
+                                                            <svg class="dropdown-item-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13 11L21.2 2.80005" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 6.8V2H17.2" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg> 
+                                                            <span>Xuất file</span></a>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a class="dropdown-item-link">
+                                                            <svg class="dropdown-item-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M17 13.4V16.4C17 20.4 15.4 22 11.4 22H7.6C3.6 22 2 20.4 2 16.4V12.6C2 8.6 3.6 7 7.6 7H10.6" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M17.0001 13.4H13.8001C11.4001 13.4 10.6001 12.6 10.6001 10.2V7L17.0001 13.4Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M11.6001 2H15.6001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 5C7 3.34 8.34 2 10 2H12.62" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M21.9999 8V14.19C21.9999 15.74 20.7399 17 19.1899 17" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 8H19C16.75 8 16 7.25 16 5V2L22 8Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            <span>Sao chép file</span></a>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a class="dropdown-item-link">
+                                                            <svg class="dropdown-item-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M9 11V17L11 15" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M9 17L7 15" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            <span>Tải file</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="request_table-data table-wrap">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="table-field-row">
+                                                    <th class="table-field-col"></th>
+                                                    <th class="table-field-col">Trạng thái</th>
+                                                    <th class="table-field-col">Mã yêu cầu</th>
+                                                    <th class="table-field-col">Ngày yêu cầu</th>
+                                                    <th class="table-field-col">Mặt bằng</th>
+                                                    <th class="table-field-col">Tiêu đề</th>
+                                                    <th class="table-field-col">Nhóm công việc</th>
+                                                    <th class="table-field-col">Bộ phận</th>
+                                                    <th class="table-field-col">Tòa nhà</th>
+                                                    <th class="table-field-col">Độ ưu tiên</th>
+                                                    <th class="table-field-col">Ngườn tiếp cận</th>
+                                                    <th class="table-field-col">Người gửi</th>
+                                                    <th class="table-field-col">Nhân viên xử lý</th>
+                                                    <th class="table-field-col">Nhân viên</th>
+                                                    <th class="table-field-col">Nội dung</th>
+                                                    <th class="table-field-col">Thời gian xử lý(tiếng)</th>
+                                                    <th class="table-field-col">Ngày kết thúc yêu cầu</th>
+                                                    <th class="table-field-col">Ngày Kh xác nhận</th>
+                                                    <th class="table-field-col">Số sao đánh giá</th>
+                                                    <th class="table-field-col">Nội dung đánh giá KH</th>
+                                                    <th class="table-field-col">Nội dung xử lý</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-check">
+                                                            <svg class="btn-icon--check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg> 
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                    <td class="table-value-col"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="request_table-pagination pagination">
+                                        <li class="pagination-item">
+                                        <a href="#" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon pagination-item-icon--disabled" name="caret-back"></ion-icon>
+                                        </a></li>
+                                        <li class="pagination-item pagination-item-current"><a href="" class="pagination-item-link">1</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">2</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">3</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon" name="caret-forward"></ion-icon>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- request-Group Table -->
+                                <div class="request-status_table data-sheet tab-table2">
+                                    <div class="request_table-selects table-tools">
+                                        <div class="btn-tools-wrap">
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-add btn">
+                                                    <svg class="btn-icon btn-icon--add" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 12H18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12 18V6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>    
+                                                    Thêm
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="request_table-data table-wrap">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="table-field-row">
+                                                    <th class="table-field-col">Tên trạng thái</th>
+                                                    <th class="table-field-col">Cập nhật</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Yêu cầu mới</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Đang xử lý</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Đã hoàn thành</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Đã đóng</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Xử lý lại</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Hủy yêu cầu</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="request_table-pagination pagination">
+                                        <li class="pagination-item">
+                                        <a href="#" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon pagination-item-icon--disabled" name="caret-back"></ion-icon>
+                                        </a></li>
+                                        <li class="pagination-item pagination-item-current"><a href="" class="pagination-item-link">1</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">2</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">3</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon" name="caret-forward"></ion-icon>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- request-Type Table -->
+                                <div class="request-type_table data-sheet tab-table3">
+                                    <div class="request_table-selects table-tools">
+                                        <div class="btn-tools-wrap">
+                                            <div class="btn-tools">
+                                                <button class="btn-tools-add btn">
+                                                    <svg class="btn-icon btn-icon--add" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 12H18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12 18V6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>    
+                                                    Thêm
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="request_table-data table-wrap">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="table-field-row">
+                                                    <th class="table-field-col">Tên viết tắt</th>
+                                                    <th class="table-field-col">Tên loại yêu cầu    </th>
+                                                    <th class="table-field-col">Cập nhật</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Nước</td>
+                                                    <td class="table-value-col">Yêu cầu dịch vụ nước</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Điện</td>
+                                                    <td class="table-value-col">Yêu cầu dịch vụ điện</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Giá</td>
+                                                    <td class="table-value-col">Phí quản lý</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Rác</td>
+                                                    <td class="table-value-col">Phí vệ sinh</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">Khắc phụ lỗi kỹ thuật</td>
+                                                    <td class="table-value-col">Bảo hành bảo trì</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">KT</td>
+                                                    <td class="table-value-col">Yêu cầu kỹ thuật</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">BT</td>
+                                                    <td class="table-value-col">Yêu cầu Bảo trì</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">KT</td>
+                                                    <td class="table-value-col">Yêu cầu kế toán</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">DV</td>
+                                                    <td class="table-value-col">Yêu cầu dịch vụ</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-value-row">
+                                                    <td class="table-value-col">CQ</td>
+                                                    <td class="table-value-col">Yêu cầu cảnh quan</td>
+                                                    <td class="table-value-col">
+                                                        <div class="table-value-col-tools">
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--save" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 13H13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 17H11" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="table-value-col-tools-item">
+                                                                <svg class="btn-icon btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.80994 2L5.18994 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M15.1899 2L18.8099 5.63" stroke="#ff1e1e" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z" stroke="#ff1e1e" stroke-width="1.5"/>
+                                                                <path d="M9.76001 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M14.3601 14V17.55" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                <path d="M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10" stroke="#ff1e1e" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>    
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="request_table-pagination pagination">
+                                        <li class="pagination-item">
+                                        <a href="#" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon pagination-item-icon--disabled" name="caret-back"></ion-icon>
+                                        </a></li>
+                                        <li class="pagination-item pagination-item-current"><a href="" class="pagination-item-link">1</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">2</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">3</a></li>
+                                        <li class="pagination-item"><a href="" class="pagination-item-link">
+                                            <ion-icon class="pagination-item-icon" name="caret-forward"></ion-icon>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Main footer -->
+            <div class="main_footer">
+                <p class="footer-copyright">Landsoft Building © 2020</p>
+                <a href="" class="footer-fanpage">
+                    <ion-icon class="footer-fanpage-icon" name="logo-facebook"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-youtube"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-linkedin"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-google"></ion-icon>
+                    <ion-icon class="footer-fanpage-icon" name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <!-- Form Add -->
+        <div class="frm frm--add">
+            <div class="frm__container">
+                <header class="frm__header">
+                    <h3 class="frm__header-heading">Tạo mới yêu cầu</h3>                  
+                    <svg class="frm__header-close btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.17004 14.83L14.83 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.83 14.83L9.17004 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </header>
+                <div class="frm__body">
+                    <div class="row">
+                        <div class="col l-6 separator--dashed">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0"></option>
+                                        <option value="1">vip</option>
+                                        <option value="2">pro</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0"></option>
+                                        <option value="1">Cá nhân</option>
+                                        <option value="2">Đến ở</option>
+                                        <option value="3">Nước ngoài</option>
+                                        <option value="4">Thuê</option>
+                                        <option value="5">xx</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <div class="frm__body-input-1 select-options">
+                                        <select>
+                                            <option value="0"></option>
+                                            <option value="1">TP HCM</option>
+                                            <option value="2">Hà Nội</option>
+                                            <option value="3">Phan Thiết</option>
+                                            <option value="4">Cà Mau</option>
+                                            <option value="5">Hải Phòng</option>
+                                            <option value="6">Cần Thơ</option>
+                                            <option value="7">Đồng Nai</option>
+                                          </select>
+                                    </div>
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" placeholder="" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0"></option>
+                                        <option value="1">Khách hàng cá nhân</option>
+                                        <option value="2">Khách hàng doanh nghiệp</option>
+                                        <option value="3">Nhà cung cấp</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-6">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <div class="frm__body-input-2 select-options">
+                                        <select>
+                                            <option value="0"></option>
+                                            <option value="1">Nam</option>
+                                            <option value="2">Nữ</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="date" class="frm__body-input" >
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" placeholder="" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" placeholder="" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="date" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" class="frm__body-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="frm__footer">
+                    <button class="frm__footer-btn btn">Lưu</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Form Edit -->
+        <div class="frm frm--edit">
+            <div class="frm__container">
+                <header class="frm__header">
+                    <h3 class="frm__header-heading">Cập nhật yêu cầu</h3>                  
+                    <svg class="frm__header-close btn-icon--delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.17004 14.83L14.83 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.83 14.83L9.17004 9.16998" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </header>
+                <div class="frm__body">
+                    <div class="row">
+                        <div class="col l-6 separator--dashed">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0"></option>
+                                        <option value="1">vip</option>
+                                        <option value="2">pro</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0"></option>
+                                        <option value="1">Cá nhân</option>
+                                        <option value="2">Đến ở</option>
+                                        <option value="3">Nước ngoài</option>
+                                        <option value="4">Thuê</option>
+                                        <option value="5">xx</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <div class="frm__body-input-1 select-options">
+                                        <select>
+                                            <option value="0"></option>
+                                            <option value="1">TP HCM</option>
+                                            <option value="2">Hà Nội</option>
+                                            <option value="3">Phan Thiết</option>
+                                            <option value="4">Cà Mau</option>
+                                            <option value="5">Hải Phòng</option>
+                                            <option value="6">Cần Thơ</option>
+                                            <option value="7">Đồng Nai</option>
+                                          </select>
+                                    </div>
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" placeholder="" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input select-options">
+                                    <select>
+                                        <option value="0"></option>
+                                        <option value="1">Khách hàng cá nhân</option>
+                                        <option value="2">Khách hàng doanh nghiệp</option>
+                                        <option value="3">Nhà cung cấp</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-6">
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <div class="frm__body-input-2 select-options">
+                                        <select>
+                                            <option value="0"></option>
+                                            <option value="1">Nam</option>
+                                            <option value="2">Nữ</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="date" class="frm__body-input" >
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" placeholder="" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" placeholder="" class="frm__body-input">
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="date" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <div class="frm__body-input-double">
+                                    <input type="text" placeholder="" class="frm__body-input-1">
+                                    <input type="text" placeholder="" class="frm__body-input">
+                                </div>
+                            </div>
+                            <div class="frm__body-input-component">
+                                <label class="frm__body-label"></label>
+                                <input type="text" class="frm__body-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="frm__footer">
+                    <button class="frm__footer-btn btn">Lưu</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="./assets/javascript/main.js"></script>
+    
+</body>
+</html>
